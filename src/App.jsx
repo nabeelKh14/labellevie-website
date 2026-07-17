@@ -32,9 +32,11 @@ function HomePage() {
   return (
     <div className="w-full min-h-screen bg-background text-dark selection:bg-accent selection:text-white">
       <Hero />
-      <Features />
-      <Philosophy />
-      <Protocol />
+      <div id="treatments">
+        <Features />
+        <Philosophy />
+        <Protocol />
+      </div>
       <FeaturedHome />
       <div className="px-2 md:px-4 bg-background pb-2 md:pb-4">
         <Footer />

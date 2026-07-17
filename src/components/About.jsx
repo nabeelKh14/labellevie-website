@@ -62,7 +62,7 @@ export default function About() {
                 <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: 'url("/labellevie_images/about.jpeg")',
+                        backgroundImage: 'url("/images/banner.jpg")',
                     }}
                 >
                     <div className="absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/20 to-dark/60"></div>
@@ -86,7 +86,7 @@ export default function About() {
                         <div ref={imageRef} className="relative">
                             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                                 <img 
-                                    src="/labellevie_images/hero.jpeg" 
+                                    src="/images/hero.jpg" 
                                     alt="Luxury Medspa Interior" 
                                     className="w-full h-[500px] object-cover"
                                 />

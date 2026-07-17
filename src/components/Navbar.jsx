@@ -31,18 +31,16 @@ export default function Navbar() {
                     : 'bg-transparent text-background border border-transparent'
                     }`}
             >
-                <div className="font-sans font-bold text-lg tracking-tight uppercase">
-                    La belle vie medspa
+                <div className="flex items-center gap-2">
+                    <img src="/images/logo.png" alt="La Belle Vie Medspa" className="h-7 w-auto object-contain" />
+                    <span className="font-sans font-bold text-lg tracking-tight uppercase hidden sm:block">La belle vie medspa</span>
                 </div>
 
                 <div className="hidden md:flex items-center gap-8 font-mono text-sm">
-                    <a href="#features" className="magnetic-link hover:text-accent transition-colors">Treatments</a>
-                    <a href="#philosophy" className="magnetic-link hover:text-accent transition-colors">Philosophy</a>
-                    <a href="/about" className="magnetic-link hover:text-accent transition-colors">About</a>
-                    <a href="/pricing" className="magnetic-link hover:text-accent transition-colors">Pricing</a>
-                    <a href="#protocol" className="magnetic-link hover:text-accent transition-colors">Protocol</a>
+                    <a href="#treatments" className="magnetic-link hover:text-accent transition-colors">Treatments</a>
                     <a href="/shop" className="magnetic-link hover:text-accent transition-colors">Shop</a>
                     <a href="/guide" className="magnetic-link hover:text-accent transition-colors">Guide</a>
+                    <a href="/about" className="magnetic-link hover:text-accent transition-colors">About</a>
                 </div>
 
                 <a

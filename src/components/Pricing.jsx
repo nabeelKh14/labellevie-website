@@ -89,7 +89,7 @@ export default function Pricing() {
                 <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: 'url("/labellevie_images/hero.jpeg")',
+                        backgroundImage: 'url("/images/hero.jpg")',
                     }}
                 >
                     <div className="absolute inset-0 bg-gradient-to-b from-dark/50 via-dark/30 to-dark/70"></div>

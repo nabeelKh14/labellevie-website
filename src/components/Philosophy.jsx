@@ -55,7 +55,7 @@ export default function Philosophy() {
                 ref={bgRef}
                 className="absolute inset-[auto_auto_-20%_auto] top-[-20%] left-0 w-full h-[140%] opacity-[0.15] pointer-events-none mix-blend-luminosity"
                 style={{
-                    backgroundImage: 'url("/philosophy-bg.png")',
+                    backgroundImage: 'url("/images/treatment-2.jpg")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}
