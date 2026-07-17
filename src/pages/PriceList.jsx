@@ -27,6 +27,29 @@ export default function PriceList() {
         </div>
       </section>
 
+      {/* Treatment gallery — real service photos from their live price list */}
+      <section className="px-6 md:px-16 py-10 max-w-6xl mx-auto">
+        <h2 className="font-sans font-bold text-2xl md:text-3xl text-primary mb-6">Our Treatments</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            ['/images/services/service-1.jpg', 'Advanced Facials'],
+            ['/images/services/service-2.jpg', 'Laser Treatments'],
+            ['/images/services/service-3.jpg', 'Injectables & Tox'],
+            ['/images/services/service-4.jpg', 'Skin Rejuvenation'],
+            ['/images/services/service-5.jpg', 'Body Contouring'],
+            ['/images/services/service-6.jpg', 'Microneedling'],
+            ['/images/services/service-7.jpg', 'Chemical Peels'],
+            ['/images/services/service-8.jpg', 'Wellness Therapies'],
+          ].map(([img, label]) => (
+            <div key={label} className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-dark/5">
+              <img src={img} alt={label} loading="lazy" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent" />
+              <span className="absolute bottom-3 left-3 font-sans font-semibold text-background text-sm">{label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Grouped price list */}
       <section className="px-6 md:px-16 py-16 max-w-5xl mx-auto">
         {groups.map((g) => (
