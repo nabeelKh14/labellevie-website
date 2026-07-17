@@ -41,6 +41,7 @@ export default function Navbar() {
                     <a href="/about" className="magnetic-link hover:text-accent transition-colors">About</a>
                     <a href="/pricing" className="magnetic-link hover:text-accent transition-colors">Pricing</a>
                     <a href="#protocol" className="magnetic-link hover:text-accent transition-colors">Protocol</a>
+                    <a href="/shop" className="magnetic-link hover:text-accent transition-colors">Shop</a>
                     <a href="/guide" className="magnetic-link hover:text-accent transition-colors">Guide</a>
                 </div>
 

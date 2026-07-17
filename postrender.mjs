@@ -1,10 +1,12 @@
 // postrender.mjs — browser-free static prerender for La Belle Vie SPA.
 // Injects crawlable, real-content HTML into dist/index.html (homepage) and
-// writes dist/guide.html (long-form guide) after build, so crawlers / AI
-// engines read full copy WITHOUT JS. Blocks target 134-167 words (as the
-// geo-seo citability scorer counts them) with question-form headings.
+// writes dist/guide.html (long-form guide) + dist/shop.html (full catalog)
+// after build, so crawlers / AI engines read full copy WITHOUT JS. Blocks
+// target 134-167 words (as the geo-seo citability scorer counts them) with
+// question-form headings.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
+import { products, categories, brands } from './src/data/catalog.js'
 
 const dist = resolve('dist')
 const file = resolve(dist, 'index.html')
@@ -75,3 +77,53 @@ const guideHtml = `<!doctype html>
 mkdirSync(dist, { recursive: true })
 writeFileSync(resolve(dist, 'guide.html'), guideHtml)
 console.log('[postrender] wrote dist/guide.html')
+
+// Write standalone shop.html so /shop + all 42 real products are crawlable without JS.
+const productRows = products.map((p) => {
+  return `  <li><strong>${p.brand}</strong> — ${p.name}</li>`
+}).join('\n')
+const categoryList = categories
+  .filter((c) => c.slug !== 'all')
+  .map((c) => c.label)
+  .join(', ')
+// JSON-LD ItemList of real products (structured data for crawlers/AI).
+const itemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'La Belle Vie Medspa Product Catalog',
+  itemListElement: products.map((p, i) => ({
+    '@type': 'Product',
+    position: i + 1,
+    name: p.name,
+    brand: { '@type': 'Brand', name: p.brand },
+  })),
+}
+const shopHtml = `<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" />
+<meta name="description" content="La Belle Vie Medspa shop: medical-grade skincare from Alastin, Epicutis, and SkinBetter, plus in-clinic treatments. Categories: ${categoryList}. Call 818.392.8500 to inquire." />
+<title>La Belle Vie Medspa Shop | Medical-Grade Skincare</title>
+<link rel="canonical" href="https://labelleviemedspa.com/shop" />
+<script type="application/ld+json">${JSON.stringify(itemList)}</script>
+</head><body>
+<main id="shop-static">
+  <h1>La Belle Vie Medspa — Shop</h1>
+  <p>Medical-grade skincare and in-clinic treatments from La Belle Vie Medspa, available at our Woodland Hills and Burbank, CA locations. Brands carried: ${brands.join(', ')}. Categories include ${categoryList}. Pricing is confirmed in-clinic; call or text 818.392.8500 to inquire or reserve.</p>
+
+  <h2>Which medical-grade skincare brands does La Belle Vie carry?</h2>
+  <p>La Belle Vie Medspa retails three professional, clinically studied skincare lines: Alastin Skincare, Epicutis, and SkinBetter Science, plus the NuFACE Trinity PRO at-home microcurrent device. Alastin leads with regenerative skin nectars, sunscreens, and serums built around trihex technology. Epicutis focuses on sensitive and post-procedure skin with its lipid serum and hyvia creme. SkinBetter offers the AlphaRet line, even-tone correctors, and sunbetter mineral protection. All three are available at both clinic locations and can be reserved by calling 818.392.8500.</p>
+
+  <h2>How do I buy products from La Belle Vie Medspa?</h2>
+  <p>La Belle Vie Medspa sells its retail skincare directly through its two clinics rather than a third-party marketplace, so product authenticity and storage are guaranteed. Clients can call or text 818.392.8500 to check inventory, reserve a specific item, or arrange pickup at the Woodland Hills or Burbank location. The team also recommends products during consultations so each regimen pairs with your in-clinic treatments. Because medical-grade lines are stocked in-clinic, availability for high-demand items like the Alastin Regenerating Skin Nectar is best confirmed by phone before visiting.</p>
+
+  <h2>What skincare categories are available in the shop?</h2>
+  <p>The La Belle Vie shop is organized into the same categories used in-clinic: cleansers, moisturizers, masks and scrubs, age defense, skin lighteners, acne defense, sun protection, sensitive skin, the full Epicutis line, and the full SkinBetter line. In-clinic treatment options such as the VFit+ treatment and membership plans are listed separately. Each product is medical-grade and selected by the practice's licensed providers for evidence-based results, from daily antioxidant serums to broad-spectrum mineral sunscreens.</p>
+
+  <h2>All Products (${products.length})</h2>
+  <ul>
+${productRows}
+  </ul>
+  <p><a href="/">Back to home</a> · Call or text <a href="tel:8183928500">818.392.8500</a></p>
+</main>
+</body></html>`
+writeFileSync(resolve(dist, 'shop.html'), shopHtml)
+console.log('[postrender] wrote dist/shop.html')

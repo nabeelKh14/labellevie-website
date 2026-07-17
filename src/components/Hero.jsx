@@ -3,6 +3,7 @@ import gsap from 'gsap';
 
 export default function Hero() {
     const containerRef = useRef(null);
+    const vantaRef = useRef(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -15,11 +16,39 @@ export default function Hero() {
                 delay: 0.2
             });
         }, containerRef);
-        return () => ctx.revert();
+
+        // Vanta subtle mesh behind the hero image (low opacity so photo reads)
+        let vanta;
+        import('vanta/dist/vanta.net.min').then((mod) => {
+            const NET = mod.default || mod;
+            if (!containerRef.current || vantaRef.current || !NET) return;
+            vanta = NET({
+                el: vantaRef.current,
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200,
+                minWidth: 200,
+                scale: 1,
+                color: 0x2e4036,
+                backgroundColor: 0x1a1a1a,
+                points: 10,
+                maxDistance: 22,
+                spacing: 18,
+            });
+            vantaRef.current._vanta = vanta;
+        }).catch(() => {/* vanta optional */});
+
+        return () => {
+            ctx.revert();
+            if (vantaRef.current && vantaRef.current._vanta) vantaRef.current._vanta.destroy();
+        };
     }, []);
 
     return (
         <section ref={containerRef} className="relative h-[100dvh] w-full overflow-hidden flex items-end pb-24 px-6 md:px-16">
+            {/* Vanta animated mesh (behind image, low opacity) */}
+            <div ref={vantaRef} className="absolute inset-0 z-0 opacity-40" />
             {/* Background Image & Overlay */}
             <div className="absolute inset-0 z-0 bg-dark">
                 <img
