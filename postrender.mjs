@@ -80,7 +80,8 @@ console.log('[postrender] wrote dist/guide.html')
 
 // Write standalone shop.html so /shop + all 42 real products are crawlable without JS.
 const productRows = products.map((p) => {
-  return `  <li><strong>${p.brand}</strong> — ${p.name}</li>`
+  const price = p.price ? ` — ${p.price}` : ''
+  return `  <li><strong>${p.brand}</strong> — ${p.name}${price}</li>`
 }).join('\n')
 const categoryList = categories
   .filter((c) => c.slug !== 'all')
@@ -91,12 +92,18 @@ const itemList = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'La Belle Vie Medspa Product Catalog',
-  itemListElement: products.map((p, i) => ({
-    '@type': 'Product',
-    position: i + 1,
-    name: p.name,
-    brand: { '@type': 'Brand', name: p.brand },
-  })),
+  itemListElement: products.map((p, i) => {
+    const el = {
+      '@type': 'Product',
+      position: i + 1,
+      name: p.name,
+      brand: { '@type': 'Brand', name: p.brand },
+    }
+    if (p.price && p.price !== 'Free') {
+      el.offers = { '@type': 'Offer', price: parseFloat(p.price.replace(/[^0-9.]/g, '')), priceCurrency: 'USD' }
+    }
+    return el
+  }),
 }
 const shopHtml = `<!doctype html>
 <html lang="en"><head><meta charset="UTF-8" />

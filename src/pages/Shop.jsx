@@ -25,8 +25,8 @@ function ProductCard({ product, index }) {
           </h3>
         </div>
         <div className="mt-6 flex items-center justify-between">
-          <span className="font-mono text-xs uppercase tracking-wider text-accent">
-            In-Clinic / Inquire
+          <span className="font-mono text-sm font-semibold text-accent">
+            {product.price || 'In-Clinic'}
           </span>
           <a
             href="tel:8183928500"

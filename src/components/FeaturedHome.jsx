@@ -35,8 +35,8 @@ export default function FeaturedHome() {
               <h3 className="font-sans font-semibold text-lg leading-snug text-dark mt-2 group-hover:text-accent transition-colors">
                 {p.name}
               </h3>
-              <span className="font-mono text-xs uppercase tracking-wider text-accent mt-4 inline-block">
-                In-Clinic / Inquire
+              <span className="font-mono text-sm font-semibold text-accent mt-3 inline-block">
+                {p.price || 'In-Clinic'}
               </span>
             </a>
           ))}
