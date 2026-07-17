@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-dark font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.magnetic-btn {
+  @apply relative overflow-hidden transition-all duration-300 active:scale-95;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .magnetic-btn:hover {
+    transform: scale(1.03);
+  }
+  
+  .magnetic-btn:hover .magnetic-btn-bg {
+    @apply translate-y-0;
+  }
+  
+  .magnetic-link:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.magnetic-btn-bg {
+  @apply absolute inset-0 bg-black/10 origin-bottom transform translate-y-full transition-transform duration-300 ease-out z-0;
+}
+
+.magnetic-link {
+  @apply inline-block transition-transform duration-300;
+}
+
+/* Base styling for elements with no visible overflow but need z-index context */
+.overflow-context {
+  isolation: isolate;
+}
