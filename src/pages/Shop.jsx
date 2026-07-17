@@ -1,4 +1,5 @@
 import { useMemo, useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Aurora from '../components/reactbits/Aurora'
@@ -15,27 +16,41 @@ function ProductCard({ product, index }) {
       blur={2}
       saturate={1.1}
     >
-      <div className="h-full flex flex-col justify-between p-6 bg-white/40 backdrop-blur-xl border border-white/40 rounded-3xl">
+      <Link
+        to={`/shop/product/${product.slug}`}
+        className="h-full flex flex-col justify-between p-4 bg-white/40 backdrop-blur-xl border border-white/40 rounded-3xl group"
+      >
+        <div className="aspect-square rounded-2xl overflow-hidden bg-dark/5 mb-4">
+          {product.image ? (
+            <img
+              src={product.image}
+              alt={product.name}
+              loading="lazy"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-primary/30 font-drama italic text-2xl">
+              {product.brand}
+            </div>
+          )}
+        </div>
         <div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-primary/50">
             {product.brand}
           </span>
-          <h3 className="font-sans font-semibold text-lg leading-snug text-dark mt-2">
+          <h3 className="font-sans font-semibold text-base leading-snug text-dark mt-1 group-hover:text-accent transition-colors">
             {product.name}
           </h3>
         </div>
-        <div className="mt-6 flex items-center justify-between">
+        <div className="mt-4 flex items-center justify-between">
           <span className="font-mono text-sm font-semibold text-accent">
             {product.price || 'In-Clinic'}
           </span>
-          <a
-            href="tel:8183928500"
-            className="font-sans text-sm font-semibold text-dark border border-dark/20 rounded-full px-4 py-2 hover:bg-accent hover:text-white hover:border-accent transition-colors"
-          >
-            Inquire
-          </a>
+          <span className="font-sans text-sm font-semibold text-dark border border-dark/20 rounded-full px-4 py-1.5 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-colors">
+            View
+          </span>
         </div>
-      </div>
+      </Link>
     </LiquidGlass>
   )
 }

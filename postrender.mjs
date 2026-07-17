@@ -165,3 +165,46 @@ const promoHtml = `<!doctype html>
 </body></html>`
 writeFileSync(resolve(dist, 'promo.html'), promoHtml)
 console.log('[postrender] wrote dist/promo.html')
+
+// Write standalone product + category pages (crawlable, real images + prices).
+mkdirSync(resolve(dist, 'shop', 'product'), { recursive: true })
+mkdirSync(resolve(dist, 'shop', 'category'), { recursive: true })
+
+for (const p of products) {
+  const html = `<!doctype html><html lang="en"><head><meta charset="UTF-8" />
+<meta name="description" content="${p.brand} ${p.name} — ${p.price || 'available in-clinic'} at La Belle Vie Medspa, Woodland Hills & Burbank CA. Medical-grade skincare." />
+<title>${p.name} | La Belle Vie Medspa</title>
+<link rel="canonical" href="https://labelleviemedspa.com/shop/product/${p.slug}" />
+<script type="application/ld+json">${JSON.stringify({
+  '@context': 'https://schema.org', '@type': 'Product',
+  name: p.name, brand: { '@type': 'Brand', name: p.brand },
+  ...(p.price && p.price !== 'Free' ? { offers: { '@type': 'Offer', price: parseFloat(p.price.replace(/[^0-9.]/g, '')), priceCurrency: 'USD' } } : {}),
+})}</script>
+</head><body style="background:#F2F0E9;color:#2E4036;font-family:system-ui,sans-serif;max-width:720px;margin:0 auto;padding:40px 24px;">
+${p.image ? `<img src="${p.image}" alt="${p.name}" style="width:100%;max-width:360px;border-radius:16px;display:block;margin:0 auto 24px;" />` : ''}
+<p style="letter-spacing:.2em;text-transform:uppercase;color:#CC5833;font-size:12px;">${p.brand}</p>
+<h1 style="font-size:34px;margin:8px 0;">${p.name}</h1>
+<p style="font-size:22px;color:#CC5833;font-weight:600;">${p.price || 'In-Clinic / Inquire'}</p>
+<p>Medical-grade ${p.brand} product available at La Belle Vie Medspa (Woodland Hills &amp; Burbank, CA). Call or text <a href="tel:8183928500">818.392.8500</a> to reserve.</p>
+<p><a href="/shop">Back to Shop</a> · <a href="/price-list">Price List</a></p>
+</body></html>`
+  writeFileSync(resolve(dist, 'shop', 'product', `${p.slug}.html`), html)
+}
+
+for (const c of categories.filter((c) => c.slug !== 'all')) {
+  const items = products.filter((p) => p.category === c.slug)
+  if (!items.length) continue
+  const lis = items.map((p) => `  <li><a href="/shop/product/${p.slug}">${p.name}</a> — ${p.price || 'In-Clinic'}</li>`).join('\n')
+  const html = `<!doctype html><html lang="en"><head><meta charset="UTF-8" />
+<meta name="description" content="La Belle Vie Medspa ${c.label}: ${items.length} medical-grade products. Call 818.392.8500." />
+<title>${c.label} | La Belle Vie Medspa Shop</title>
+<link rel="canonical" href="https://labelleviemedspa.com/shop/category/${c.slug}" />
+</head><body style="background:#F2F0E9;color:#2E4036;font-family:system-ui,sans-serif;max-width:720px;margin:0 auto;padding:40px 24px;">
+<h1 style="font-size:34px;">${c.label}</h1>
+<p>${items.length} products</p>
+<ul>\n${lis}\n</ul>
+<p><a href="/shop">Back to Shop</a></p>
+</body></html>`
+  writeFileSync(resolve(dist, 'shop', 'category', `${c.slug}.html`), html)
+}
+console.log('[postrender] wrote', products.length, 'product pages +', categories.length - 1, 'category pages')

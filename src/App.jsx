@@ -9,10 +9,11 @@ import Protocol from './components/Protocol';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
 import About from './components/About';
-import Pricing from './components/Pricing';
-import Guide from './pages/Guide'
-import Shop from './pages/Shop'
-import Promo from './pages/Promo'
+import PriceList from './pages/PriceList';
+import Shop from './pages/Shop';
+import ProductPage from './pages/ProductPage';
+import CategoryPage from './pages/CategoryPage';
+import Promo from './pages/Promo';
 import FeaturedHome from './components/FeaturedHome';
 
 function HomePage() {
@@ -55,9 +56,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/guide" element={<Guide />} />
+        <Route path="/price-list" element={<PriceList />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/category/:slug" element={<CategoryPage />} />
+        <Route path="/shop/product/:slug" element={<ProductPage />} />
         <Route path="/promo" element={<Promo />} />
       </Routes>
     </div>

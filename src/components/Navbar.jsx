@@ -37,11 +37,11 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden md:flex items-center gap-8 font-mono text-sm">
-                    <a href="#treatments" className="magnetic-link hover:text-accent transition-colors">Treatments</a>
+                    <a href="/" className="magnetic-link hover:text-accent transition-colors">Home</a>
+                    <a href="/about" className="magnetic-link hover:text-accent transition-colors">About</a>
+                    <a href="/price-list" className="magnetic-link hover:text-accent transition-colors">Price List</a>
                     <a href="/shop" className="magnetic-link hover:text-accent transition-colors">Shop</a>
                     <a href="/promo" className="magnetic-link hover:text-accent transition-colors">Promo</a>
-                    <a href="/guide" className="magnetic-link hover:text-accent transition-colors">Guide</a>
-                    <a href="/about" className="magnetic-link hover:text-accent transition-colors">About</a>
                 </div>
 
                 <a
