@@ -12,6 +12,7 @@ import About from './components/About';
 import Pricing from './components/Pricing';
 import Guide from './pages/Guide'
 import Shop from './pages/Shop'
+import Promo from './pages/Promo'
 import FeaturedHome from './components/FeaturedHome';
 
 function HomePage() {
@@ -57,6 +58,7 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/promo" element={<Promo />} />
       </Routes>
     </div>
   );

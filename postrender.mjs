@@ -134,3 +134,34 @@ ${productRows}
 </body></html>`
 writeFileSync(resolve(dist, 'shop.html'), shopHtml)
 console.log('[postrender] wrote dist/shop.html')
+
+// Write standalone promo.html (dark-mode promo page, crawler-visible).
+const promoHtml = `<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" />
+<meta name="description" content="La Belle Vie Medspa exclusive July 2026 promo offers. Claim your voucher for personalized treatment pricing at our Woodland Hills and Burbank, CA locations. Call 818.392.8500." />
+<title>La Belle Vie Medspa Promo | Exclusive July 2026 Offers</title>
+<link rel="canonical" href="https://labelleviemedspa.com/promo" />
+</head><body id="promo-static" style="background:#0E100F;color:#F2F0E9;">
+<main style="max-width:760px;margin:0 auto;padding:48px 24px;font-family:system-ui,sans-serif;">
+  <p style="letter-spacing:.3em;text-transform:uppercase;color:#CC5833;font-size:12px;">Exclusive Offers &middot; July 2026</p>
+  <h1 style="font-size:40px;margin:12px 0 16px;">Claim your voucher.</h1>
+  <p>One of our exclusive pricing options &mdash; personalized to your goals. Begin your treatment journey at La Belle Vie Medspa.</p>
+  <h2>Exclusive promo offers</h2>
+  <p>La Belle Vie Medspa releases limited monthly offers on its advanced aesthetic and wellness treatments. Claim your voucher to lock in one of our exclusive pricing options, then book a consultation to determine which treatments are right for your goals. Consultations are available by appointment at both clinic locations.</p>
+  <h2>How do I claim a La Belle Vie promo voucher?</h2>
+  <p>Submit the promo form with your name and email, or call or text 818.392.8500. The team matches you with the current month's exclusive offer and confirms your consultation. Offers are personalized, so the right option depends on your treatment goals and the provider's recommendation during your visit.</p>
+  <h2>Locations</h2>
+  <p><strong>Woodland Hills</strong> &mdash; French Quarter, 20969 Ventura Blvd, Suite 23, Woodland Hills, CA 91364.</p>
+  <p><strong>Burbank</strong> &mdash; Magnolia Park, 2924 W Magnolia Blvd, Burbank, CA 91505.</p>
+  <p>Call or text <a href="tel:8183928500">818.392.8500</a> to book. Consultations available by appointment.</p>
+  <h2>Gallery</h2>
+  <ul>
+    <li>Our team &mdash; <a href="/images/hero.jpg">hero.jpg</a></li>
+    <li>Advanced treatments &mdash; <a href="/images/treatment-1.jpg">treatment-1.jpg</a></li>
+    <li>The experience &mdash; <a href="/images/treatment-2.jpg">treatment-2.jpg</a></li>
+    <li>Woodland Hills &amp; Burbank &mdash; <a href="/images/banner.jpg">banner.jpg</a></li>
+  </ul>
+</main>
+</body></html>`
+writeFileSync(resolve(dist, 'promo.html'), promoHtml)
+console.log('[postrender] wrote dist/promo.html')
