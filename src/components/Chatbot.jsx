@@ -5,7 +5,7 @@ import gsap from 'gsap';
 export default function Chatbot() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { id: 1, text: "Welcome to La Belle Vie Medspa. How can we assist with your protocol today?", sender: "bot" }
+    { id: 1, text: "Welcome to La Belle Vie Medspa. Questions about treatments or booking? Leave a note and we'll text you back at 818.392.8500.", sender: "bot" }
     ]);
     const [input, setInput] = useState('');
     const chatWindowRef = useRef(null);
@@ -28,11 +28,11 @@ export default function Chatbot() {
         setMessages(prev => [...prev, userMsg]);
         setInput('');
 
-        // Simulate bot response
+        // Local inquiry acknowledgement (no backend wired yet — honest copy)
         setTimeout(() => {
             setMessages(prev => [...prev, {
                 id: Date.now(),
-                text: "Our concierge will review your inquiry shortly. Would you like to schedule a consultation?",
+                text: "Thanks! This is a demo chat — for a real reply, call or text us at 818.392.8500 and we'll get back to you.",
                 sender: "bot"
             }]);
         }, 1000);
@@ -55,7 +55,7 @@ export default function Chatbot() {
                             </div>
                             <div>
                                 <h4 className="font-sans font-bold text-sm leading-tight">Concierge</h4>
-                                <p className="font-mono text-[10px] text-background/70 tracking-widest uppercase">System Online</p>
+                                <p className="font-mono text-[10px] text-background/70 tracking-widest uppercase">Mon–Sat · Woodland Hills & Burbank</p>
                             </div>
                         </div>
                         <button

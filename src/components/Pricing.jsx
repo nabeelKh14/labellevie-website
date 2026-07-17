@@ -40,7 +40,7 @@ const serviceCategories = [
             { name: "IV Therapy", price: "$250", duration: "45 min", description: "Custom vitamin infusions" },
             { name: "Vitamin B12 Shot", price: "$45", duration: "5 min", description: "Energy & metabolism support" },
             { name: "Wellness Consultation", price: "$125", duration: "60 min", description: "Personalized health assessment" },
-            { name: " hormone Therapy", price: "$200", duration: "30 min", description: "Bio-identical hormone evaluation" },
+            { name: "Hormone Therapy", price: "$200", duration: "30 min", description: "Bio-identical hormone evaluation" },
         ]
     }
 ];

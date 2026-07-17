@@ -12,36 +12,39 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <button className="magnetic-btn border border-background/20 px-8 py-3 rounded-full font-mono text-xs hover:border-accent hover:bg-accent/10 transition-colors">
-                        Book Appointment
-                    </button>
+                    <button
+                    onClick={() => (window.location.href = 'tel:8183928500')}
+                    className="magnetic-btn border border-background/20 px-8 py-3 rounded-full font-mono text-xs hover:border-accent hover:bg-accent/10 transition-colors"
+                >
+                    Book Appointment
+                </button>
                 </div>
 
                 {/* Links Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 mb-24 border-t border-background/10 pt-16">
                     <div className="flex flex-col gap-4">
                         <h4 className="font-sans font-semibold text-sm tracking-widest uppercase text-background/40">Treatment</h4>
-                        <a href="#" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Regenerative Care</a>
-                        <a href="#" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Facial Mapping</a>
-                        <a href="#" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">IV Therapy</a>
+                        <a href="#features" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Facials & Injectables</a>
+                        <a href="#features" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Body & Wellness</a>
+                        <a href="#features" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">IV Therapy</a>
                     </div>
                     <div className="flex flex-col gap-4">
                         <h4 className="font-sans font-semibold text-sm tracking-widest uppercase text-background/40">Philosophy</h4>
-                        <a href="#" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Our Approach</a>
-                        <a href="#" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Clinical Lab</a>
-                        <a href="#" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Journal</a>
+                        <a href="#philosophy" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Our Approach</a>
+                        <a href="#protocol" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">The Protocol</a>
+                        <a href="/guide" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Patient Guide</a>
                     </div>
                     <div className="flex flex-col gap-4">
                         <h4 className="font-sans font-semibold text-sm tracking-widest uppercase text-background/40">Connect</h4>
-                        <a href="#" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">818.392.8500</a>
-                        <a href="#" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Concierge</a>
-                        <a href="#" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Instagram</a>
+                        <a href="tel:8183928500" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">818.392.8500</a>
+                        <a href="https://www.instagram.com/labelleviemedspa" target="_blank" rel="noopener noreferrer" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Instagram</a>
+                        <a href="mailto:info@labelleviemedspa.com" className="font-serif italic text-sm text-background/80 hover:text-accent transition-colors">Email Us</a>
                     </div>
 
-                    <div className="flex flex-col gap-4 items-start md:items-end mt-8 md:mt-0 col-span-2 md:col-span-1">
+                    <div className="flex flex-col items-start md:items-end mt-8 md:mt-0 col-span-2 md:col-span-1">
                         <div className="p-4 bg-background/5 rounded-2xl border border-background/10 font-mono text-xs flex items-center gap-3">
                             <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_#22c55e] animate-pulse"></div>
-                            <span className="text-background/80 uppercase tracking-widest">Protocol online<br />System optimal</span>
+                            <span className="text-background/80 uppercase tracking-widest">Mon–Sat · 9am–6pm<br />Woodland Hills & Burbank</span>
                         </div>
                     </div>
                 </div>
@@ -50,9 +53,9 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-xs font-mono text-background/40 border-t border-background/5 pt-8">
                     <span>&copy; {new Date().getFullYear()} La Belle Vie Medspa. All rights reserved.</span>
                     <div className="flex gap-6 uppercase">
-                        <a href="#" className="hover:text-background transition-colors">Privacy</a>
-                        <a href="#" className="hover:text-background transition-colors">Terms</a>
-                        <a href="#" className="hover:text-background transition-colors">HIPAA</a>
+                        <a href="mailto:info@labelleviemedspa.com?subject=Privacy%20Policy" className="hover:text-background transition-colors">Privacy</a>
+                        <a href="mailto:info@labelleviemedspa.com?subject=Terms%20%26%20Conditions" className="hover:text-background transition-colors">Terms</a>
+                        <a href="mailto:info@labelleviemedspa.com?subject=HIPAA%20Compliance" className="hover:text-background transition-colors">HIPAA</a>
                     </div>
                 </div>
 

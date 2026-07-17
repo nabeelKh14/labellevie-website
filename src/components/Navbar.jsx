@@ -41,12 +41,16 @@ export default function Navbar() {
                     <a href="/about" className="magnetic-link hover:text-accent transition-colors">About</a>
                     <a href="/pricing" className="magnetic-link hover:text-accent transition-colors">Pricing</a>
                     <a href="#protocol" className="magnetic-link hover:text-accent transition-colors">Protocol</a>
+                    <a href="/guide" className="magnetic-link hover:text-accent transition-colors">Guide</a>
                 </div>
 
-                <button className="magnetic-btn bg-accent text-background px-6 py-2.5 rounded-full font-sans font-semibold text-sm tracking-wide">
+                <a
+                    href="tel:8183928500"
+                    className="magnetic-btn bg-accent text-background px-6 py-2.5 rounded-full font-sans font-semibold text-sm tracking-wide"
+                >
                     <span className="magnetic-btn-bg"></span>
                     <span className="relative z-10">Book Appointment</span>
-                </button>
+                </a>
             </nav>
         </div>
     );

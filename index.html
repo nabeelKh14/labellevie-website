@@ -1,23 +1,110 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La belle vie medspa</title>
-  <!-- Fonts for Organic Tech (Preset A) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
-    rel="stylesheet">
-</head>
+    <!-- SEO fundamentals (were MISSING — crawlers saw an empty shell) -->
+    <title>La Belle Vie Medspa & Wellness Center | Woodland Hills & Burbank, CA</title>
+    <meta
+      name="description"
+      content="La Belle Vie Medspa & Wellness Center offers advanced aesthetic and regenerative treatments — Hydrafacial, Botox, dermal fillers, microneedling, CoolSculpting, IV therapy and medical-grade skincare — in Woodland Hills and Burbank, CA. Call/Text 818.392.8500 to book."
+    />
+    <link rel="canonical" href="https://labelleviemedspa.com/" />
+    <meta name="robots" content="index, follow" />
 
-<body>
-  <div id="root"></div>
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="La Belle Vie Medspa & Wellness Center" />
+    <meta
+      property="og:title"
+      content="La Belle Vie Medspa & Wellness Center | Woodland Hills & Burbank, CA"
+    />
+    <meta
+      property="og:description"
+      content="Advanced aesthetic & regenerative medspa treatments in Woodland Hills and Burbank, CA. Call/Text 818.392.8500."
+    />
+    <meta property="og:url" content="https://labelleviemedspa.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="La Belle Vie Medspa & Wellness Center" />
+    <meta
+      name="twitter:description"
+      content="Advanced aesthetic & regenerative medspa treatments in Woodland Hills and Burbank, CA."
+    />
 
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <!-- JSON-LD: crawable WITHOUT JavaScript (critical for SPA SEO/AI-search) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "MedicalBusiness",
+            "@id": "https://labelleviemedspa.com/#organization",
+            "name": "La Belle Vie Medspa & Wellness Center",
+            "url": "https://labelleviemedspa.com/",
+            "telephone": "+1-818-392-8500",
+            "priceRange": "$$$",
+            "image": "https://labelleviemedspa.com/hero.jpg",
+            "address": [
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "20969 Ventura Blvd #23",
+                "addressLocality": "Woodland Hills",
+                "addressRegion": "CA",
+                "postalCode": "91364",
+                "addressCountry": "US"
+              },
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "2924 W. Magnolia Blvd",
+                "addressLocality": "Burbank",
+                "addressRegion": "CA",
+                "postalCode": "91505",
+                "addressCountry": "US"
+              }
+            ],
+            "geo": [
+              { "@type": "GeoCoordinates", "latitude": 34.1622, "longitude": -118.5905 },
+              { "@type": "GeoCoordinates", "latitude": 34.1808, "longitude": -118.3387 }
+            ],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
+            "sameAs": [
+              "https://www.instagram.com/labelleviemedspa",
+              "https://www.facebook.com/120793345984191",
+              "https://www.x.com/Labelleviespa",
+              "https://www.yelp.com/biz/WWXYQKUhCqEKT3HsPbuP0w"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://labelleviemedspa.com/#website",
+            "url": "https://labelleviemedspa.com/",
+            "name": "La Belle Vie Medspa & Wellness Center",
+            "publisher": { "@id": "https://labelleviemedspa.com/#organization" }
+          }
+        ]
+      }
+    </script>
 
+    <!-- Fonts for Organic Tech (Preset A) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

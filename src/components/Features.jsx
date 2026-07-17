@@ -5,8 +5,8 @@ import gsap from 'gsap';
 const ShufflerCard = () => {
     const [items, setItems] = useState([
         { id: 1, title: 'Direct Access', text: 'Call/Text: 818.392.8500' },
-        { id: 2, title: 'Concierge Booking', text: 'Priority scheduling line' },
-        { id: 3, title: 'Client Support', text: 'Available 24/7 for you' },
+        { id: 2, title: 'Two Locations', text: 'Woodland Hills & Burbank, CA' },
+        { id: 3, title: 'Mon–Sat Hours', text: '9am–6pm, by appointment' },
     ]);
 
     useEffect(() => {
