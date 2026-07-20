@@ -1,0 +1,412 @@
+{
+  "a-team-duo-kit": {
+    "title": "A-Team Duo Kit",
+    "price": "$185.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/SB5515_NewATeamDuoKit.webp/:/rs=w:930,h:930",
+    "alt": "A-Team Duo Kit",
+    "all_alts": [
+      "A-Team Duo Kit",
+      "A-Team Duo Kit"
+    ]
+  },
+  "alastin-ha-hyaluronic-acid-immerse-serum": {
+    "title": "Alastin HA (Hyaluronic Acid) IMMERSE Serum",
+    "price": "$110.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/HA.jpg/:/rs=w:1200,h:1200",
+    "alt": "Alastin HA (Hyaluronic Acid) IMMERSE Serum",
+    "all_alts": [
+      "Alastin HA (Hyaluronic Acid) IMMERSE Serum",
+      "Alastin HA (Hyaluronic Acid) IMMERSE Serum"
+    ]
+  },
+  "alastin-hydratint-pro-mineral-broad-spectrum-sunscreen-spf-36": {
+    "title": "Alastin HydraTint Pro Mineral Broad Spectrum Sunscreen SPF 36",
+    "price": "$60.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Hydratint.jpg/:/rs=w:1200,h:1200",
+    "alt": "Alastin HydraTint Pro Mineral Broad Spectrum Sunscreen SPF 36",
+    "all_alts": [
+      "Alastin HydraTint Pro Mineral Broad Spectrum Sunscreen SPF 36",
+      "Alastin HydraTint Pro Mineral Broad Spectrum Sunscreen SPF 36"
+    ]
+  },
+  "alastin-regenerating-skin-nectar": {
+    "title": "Alastin Regenerating Skin Nectar",
+    "price": "$199.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Nectar.jpg/:/rs=w:1200,h:1200",
+    "alt": "Alastin Regenerating Skin Nectar",
+    "all_alts": [
+      "Alastin Regenerating Skin Nectar",
+      "Alastin Regenerating Skin Nectar"
+    ]
+  },
+  "alastin-renewal-retinol": {
+    "title": "Alastin Renewal Retinol",
+    "price": "$64.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Retinol.png/:/rs=w:1200,h:1200",
+    "alt": "Alastin Renewal Retinol",
+    "all_alts": [
+      "Alastin Renewal Retinol",
+      "Alastin Renewal Retinol"
+    ]
+  },
+  "alastin-restorative-skin-complex": {
+    "title": "Alastin Restorative Skin Complex",
+    "price": "$199.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/restore%20skin%20complex.jpg/:/rs=w:1200,h:1200",
+    "alt": "Alastin Restorative Skin Complex",
+    "all_alts": [
+      "Alastin Restorative Skin Complex",
+      "Alastin Restorative Skin Complex"
+    ]
+  },
+  "alastin-silksheild-all-mineral-sunscreen-spf-30": {
+    "title": "Alastin SilkSHEILD All Mineral Sunscreen SPF 30",
+    "price": "$55.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/sunscreen.png/:/rs=w:1200,h:1200",
+    "alt": "Alastin SilkSHEILD All Mineral Sunscreen SPF 30",
+    "all_alts": [
+      "Alastin SilkSHEILD All Mineral Sunscreen SPF 30",
+      "Alastin SilkSHEILD All Mineral Sunscreen SPF 30"
+    ]
+  },
+  "alastin-ultra-calm-cleansing-cream": {
+    "title": "Alastin Ultra Calm Cleansing Cream",
+    "price": "$45.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/cleanser.png/:/rs=w:1200,h:1200",
+    "alt": "Alastin Ultra Calm Cleansing Cream",
+    "all_alts": [
+      "Alastin Ultra Calm Cleansing Cream",
+      "Alastin Ultra Calm Cleansing Cream"
+    ]
+  },
+  "alastin-ultra-light-moisturizer": {
+    "title": "Alastin Ultra Light Moisturizer",
+    "price": "$72.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/moisturizer.png/:/rs=w:1200,h:1200",
+    "alt": "Alastin Ultra Light Moisturizer",
+    "all_alts": [
+      "Alastin Ultra Light Moisturizer",
+      "Alastin Ultra Light Moisturizer"
+    ]
+  },
+  "alpharet-clearing-serum": {
+    "title": "AlphaRet Clearing Serum",
+    "price": "$140.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/ACS%20Product%20Smear%20PDP%20(2000x2000).webp/:/rs=w:930,h:930",
+    "alt": "AlphaRet Clearing Serum",
+    "all_alts": [
+      "AlphaRet Clearing Serum",
+      "AlphaRet Clearing Serum"
+    ]
+  },
+  "alpharet-exfoliating-peel-pads": {
+    "title": "AlphaRet Exfoliating Peel Pads",
+    "price": "$120.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/AlphaRet-Exfoliating-Peel-Pads-Award-Winner-Se.jpg/:/rs=w:930,h:930",
+    "alt": "AlphaRet Exfoliating Peel Pads",
+    "all_alts": [
+      "AlphaRet Exfoliating Peel Pads",
+      "AlphaRet Exfoliating Peel Pads"
+    ]
+  },
+  "alpharet-overnight-cream-30-ml": {
+    "title": "AlphaRet Overnight Cream 30 mL",
+    "price": "$140.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/AlphaRet%20PDP%2030%20ml%20Bottle%20wSmear%20%26%20Award%20Left.webp/:/rs=w:930,h:930",
+    "alt": "AlphaRet Overnight Cream 30 mL",
+    "all_alts": [
+      "AlphaRet Overnight Cream 30 mL",
+      "AlphaRet Overnight Cream 30 mL"
+    ]
+  },
+  "alto-advanced-defense-and-repair-serum-30-ml": {
+    "title": "Alto Advanced Defense and Repair Serum 30 mL",
+    "price": "$195.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Alto%20Adv%20PDP%2030%20ml%20Smear%20%2B%20Seal%20Left%20(2000x20.webp/:/rs=w:930,h:930",
+    "alt": "Alto Advanced Defense and Repair Serum 30 mL",
+    "all_alts": [
+      "Alto Advanced Defense and Repair Serum 30 mL",
+      "Alto Advanced Defense and Repair Serum 30 mL"
+    ]
+  },
+  "alto-advanced-defense-and-repair-serum-50-ml": {
+    "title": "Alto Advanced Defense and Repair Serum 50 mL",
+    "price": "$275.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Alto%20Adv%20PDP%2030%20ml%20Smear%20%2B%20Seal%20Left%20(2000x20.webp/:/rs=w:930,h:930",
+    "alt": "Alto Advanced Defense and Repair Serum 50 mL",
+    "all_alts": [
+      "Alto Advanced Defense and Repair Serum 50 mL",
+      "Alto Advanced Defense and Repair Serum 50 mL"
+    ]
+  },
+  "alto-defense-serum-30-ml": {
+    "title": "Alto Defense Serum 30 mL",
+    "price": "$170.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/M007-30ml.webp/:/rs=w:930,h:930",
+    "alt": "Alto Defense Serum 30 mL",
+    "all_alts": [
+      "Alto Defense Serum 30 mL",
+      "Alto Defense Serum 30 mL"
+    ]
+  },
+  "cleansing-gel-8-fl-oz": {
+    "title": "Cleansing Gel 8 fl. oz",
+    "price": "$50.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/DetoxifyingScrubMask2oz-Hero-Assets-2-7504af3.webp/:/rs=w:930,h:930",
+    "alt": "Cleansing Gel 8 fl. oz",
+    "all_alts": [
+      "Cleansing Gel 8 fl. oz",
+      "Cleansing Gel 8 fl. oz"
+    ]
+  },
+  "detoxifying-scrub-mask": {
+    "title": "Detoxifying Scrub Mask",
+    "price": "$60.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/DetoxifyingScrubMask2oz-Hero-Assets-2000x2000.webp/:/rs=w:930,h:930",
+    "alt": "Detoxifying Scrub Mask",
+    "all_alts": [
+      "Detoxifying Scrub Mask",
+      "Detoxifying Scrub Mask"
+    ]
+  },
+  "epicutis-hyvia-creme": {
+    "title": "Epicutis Hyvia Creme",
+    "price": "$195.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/hyvia%20creme.webp/:/rs=w:1200,h:1200",
+    "alt": "Epicutis Hyvia Creme",
+    "all_alts": [
+      "Epicutis Hyvia Creme",
+      "Epicutis Hyvia Creme"
+    ]
+  },
+  "epicutis-lipid-recovery-mask": {
+    "title": "Epicutis Lipid Recovery Mask",
+    "price": "$25.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/mask.webp/:/rs=w:1200,h:1200",
+    "alt": "Epicutis Lipid Recovery Mask",
+    "all_alts": [
+      "Epicutis Lipid Recovery Mask",
+      "Epicutis Lipid Recovery Mask"
+    ]
+  },
+  "epicutis-lipid-recovery-mask-x5": {
+    "title": "Epicutis - Lipid Recovery Mask x5",
+    "price": "$125.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/mask.webp/:/rs=w:1200,h:1200",
+    "alt": "Epicutis - Lipid Recovery Mask x5",
+    "all_alts": [
+      "Epicutis - Lipid Recovery Mask x5",
+      "Epicutis - Lipid Recovery Mask x5"
+    ]
+  },
+  "epicutis-lipid-serum": {
+    "title": "Epicutis Lipid Serum",
+    "price": "$250.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/lipid.webp/:/rs=w:640,h:650",
+    "alt": "Epicutis Lipid Serum",
+    "all_alts": [
+      "Epicutis Lipid Serum",
+      "Epicutis Lipid Serum"
+    ]
+  },
+  "epicutis-oil-cleanser": {
+    "title": "Epicutis Oil Cleanser",
+    "price": "$85.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/oil%20cleanser.webp/:/rs=w:1200,h:1200",
+    "alt": "Epicutis Oil Cleanser",
+    "all_alts": [
+      "Epicutis Oil Cleanser",
+      "Epicutis Oil Cleanser"
+    ]
+  },
+  "epicutis-post-procedure-kit": {
+    "title": "Epicutis Post-procedure Kit",
+    "price": "$75.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/post%20procedure.webp/:/rs=w:1200,h:1200",
+    "alt": "Epicutis Post-procedure Kit",
+    "all_alts": [
+      "Epicutis Post-procedure Kit",
+      "Epicutis Post-procedure Kit"
+    ]
+  },
+  "even-tone-correcting-serum-50-ml": {
+    "title": "Even Tone Correcting Serum 50 mL",
+    "price": "$160.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Even%20Product%20Smear%20PDP%20(2000x2000).webp/:/rs=w:930,h:930",
+    "alt": "Even Tone Correcting Serum 50 mL",
+    "all_alts": [
+      "Even Tone Correcting Serum 50 mL",
+      "Even Tone Correcting Serum 50 mL"
+    ]
+  },
+  "eyemax-alpharet-overnight-cream": {
+    "title": "EyeMax AlphaRet Overnight Cream",
+    "price": "$125.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Eyemax.webp/:/rs=w:930,h:930",
+    "alt": "EyeMax AlphaRet Overnight Cream",
+    "all_alts": [
+      "EyeMax AlphaRet Overnight Cream",
+      "EyeMax AlphaRet Overnight Cream"
+    ]
+  },
+  "free-rapid-covid-testing": {
+    "title": "FREE Rapid Covid Testing",
+    "price": "$0.01",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/26A07830-41AF-4DAE-B37E-8471C8768A10-0001.jpg/:/rs=w:1200,h:1200",
+    "alt": "FREE Rapid Covid Testing",
+    "all_alts": [
+      "FREE Rapid Covid Testing",
+      "FREE Rapid Covid Testing"
+    ]
+  },
+  "hydration-boosting-cream-50-ml": {
+    "title": "Hydration Boosting Cream 50 mL",
+    "price": "$100.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/M020.webp/:/rs=w:930,h:930",
+    "alt": "Hydration Boosting Cream 50 mL",
+    "all_alts": [
+      "Hydration Boosting Cream 50 mL",
+      "Hydration Boosting Cream 50 mL"
+    ]
+  },
+  "instant-effect-gel-eye": {
+    "title": "Instant Effect Gel EYE",
+    "price": "$110.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/SB5204_InstantEffectGelEYE15ML.webp/:/rs=w:930,h:930",
+    "alt": "Instant Effect Gel EYE",
+    "all_alts": [
+      "Instant Effect Gel EYE",
+      "Instant Effect Gel EYE"
+    ]
+  },
+  "intensive-alpharet-overnight-cream-30-ml": {
+    "title": "Intensive AlphaRet Overnight Cream 30 mL",
+    "price": "$140.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Intensive%20AlphaRet%20Product%20Smear%20PDP%20(2000x20.webp/:/rs=w:930,h:930",
+    "alt": "Intensive AlphaRet Overnight Cream 30 mL",
+    "all_alts": [
+      "Intensive AlphaRet Overnight Cream 30 mL",
+      "Intensive AlphaRet Overnight Cream 30 mL"
+    ]
+  },
+  "intensive-alpharet-overnight-cream-50-ml": {
+    "title": "Intensive AlphaRet Overnight Cream 50 mL",
+    "price": "$200.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/SB5113_IntensiveAlphaRetOvernightCream50ML.def.jpg/:/rs=w:930,h:930",
+    "alt": "Intensive AlphaRet Overnight Cream 50 mL",
+    "all_alts": [
+      "Intensive AlphaRet Overnight Cream 50 mL",
+      "Intensive AlphaRet Overnight Cream 50 mL"
+    ]
+  },
+  "mystro-active-balance-serum": {
+    "title": "Mystro Active Balance Serum",
+    "price": "$225.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Mystro%20PDP%2030%20ml%20Bottle%20wSmear%20%26%20Award%20Left%20(.webp/:/rs=w:930,h:930",
+    "alt": "Mystro Active Balance Serum",
+    "all_alts": [
+      "Mystro Active Balance Serum",
+      "Mystro Active Balance Serum"
+    ]
+  },
+  "nuface-trinity-pro-facial-toning-device": {
+    "title": "NuFACE Trinity PRO Facial Toning Device",
+    "price": "$345.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/04NF_Trinity_HLOGP-1800x1800-NEW_1.webp/:/rs=w:1200,h:1200",
+    "alt": "NuFACE Trinity PRO Facial Toning Device",
+    "all_alts": [
+      "NuFACE Trinity PRO Facial Toning Device",
+      "NuFACE Trinity PRO Facial Toning Device"
+    ]
+  },
+  "refining-foam-cleanser-5-fl-oz": {
+    "title": "Refining Foam Cleanser 5 fl. oz",
+    "price": "$48.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/RFC-Hero-NewSeal-2000x2000-x2-v1.webp/:/rs=w:930,h:930",
+    "alt": "Refining Foam Cleanser 5 fl. oz",
+    "all_alts": [
+      "Refining Foam Cleanser 5 fl. oz",
+      "Refining Foam Cleanser 5 fl. oz"
+    ]
+  },
+  "sunbetter-sheer-spf-56-sunscreen-stick": {
+    "title": "Sunbetter SHEER SPF 56 Sunscreen Stick",
+    "price": "$55.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/sunbetter-SHEER-SPF-56-Sunscreen-Stick-20-g-S.webp/:/rs=w:930,h:930",
+    "alt": "Sunbetter SHEER SPF 56 Sunscreen Stick",
+    "all_alts": [
+      "Sunbetter SHEER SPF 56 Sunscreen Stick",
+      "Sunbetter SHEER SPF 56 Sunscreen Stick"
+    ]
+  },
+  "sunbetter-sheer-spf-70-sunscreen-lotion": {
+    "title": "Sunbetter SHEER SPF 70 Sunscreen Lotion",
+    "price": "$75.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/sunbetter-SHEER-SPF-70-Sunscreen-Stick-20-g-S.webp/:/rs=w:930,h:930",
+    "alt": "Sunbetter SHEER SPF 70 Sunscreen Lotion",
+    "all_alts": [
+      "Sunbetter SHEER SPF 70 Sunscreen Lotion",
+      "Sunbetter SHEER SPF 70 Sunscreen Lotion"
+    ]
+  },
+  "sunbetter-tone-smart-spf-68-sunscreen-compact": {
+    "title": "Sunbetter TONE SMART SPF 68 Sunscreen Compact",
+    "price": "$65.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/M024.webp/:/rs=w:930,h:930",
+    "alt": "Sunbetter TONE SMART SPF 68 Sunscreen Compact",
+    "all_alts": [
+      "Sunbetter TONE SMART SPF 68 Sunscreen Compact",
+      "Sunbetter TONE SMART SPF 68 Sunscreen Compact"
+    ]
+  },
+  "sunbetter-tone-smart-spf-75-sunscreen-lotion": {
+    "title": "Sunbetter TONE SMART SPF 75 Sunscreen Lotion",
+    "price": "$75.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/M025.webp/:/rs=w:930,h:930",
+    "alt": "Sunbetter TONE SMART SPF 75 Sunscreen Lotion",
+    "all_alts": [
+      "Sunbetter TONE SMART SPF 75 Sunscreen Lotion",
+      "Sunbetter TONE SMART SPF 75 Sunscreen Lotion"
+    ]
+  },
+  "techno-neck-perfecting-cream-50-ml": {
+    "title": "Techno Neck Perfecting Cream 50 mL",
+    "price": "$150.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Techno%20Product%20Smear%20PDP%20(2000x2000).webp/:/rs=w:930,h:930",
+    "alt": "Techno Neck Perfecting Cream 50 mL",
+    "all_alts": [
+      "Techno Neck Perfecting Cream 50 mL",
+      "Techno Neck Perfecting Cream 50 mL"
+    ]
+  },
+  "trio-luxe-moisture-treatment": {
+    "title": "Trio Luxe Moisture Treatment",
+    "price": "$175.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Trio-Luxe-Moisture-Treatment-50ml-Award-Winne.webp/:/rs=w:930,h:930",
+    "alt": "Trio Luxe Moisture Treatment",
+    "all_alts": [
+      "Trio Luxe Moisture Treatment",
+      "Trio Luxe Moisture Treatment"
+    ]
+  },
+  "trio-rebalancing-moisture-treatment-50-ml": {
+    "title": "Trio Rebalancing Moisture Treatment 50 mL",
+    "price": "$155.00",
+    "image": "https://img1.wsimg.com/isteam/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/Trio%20Product%20Smear%20PDP%20(2000x2000).webp/:/rs=w:930,h:930",
+    "alt": "Trio Rebalancing Moisture Treatment 50 mL",
+    "all_alts": [
+      "Trio Rebalancing Moisture Treatment 50 mL",
+      "Trio Rebalancing Moisture Treatment 50 mL"
+    ]
+  },
+  "vfitplus": {
+    "title": "vFITplus",
+    "price": "$495.00",
+    "image": "https://isteam.wsimg.com/ip/9c7eedcf-b0aa-4001-82da-47e61ca3c5e7/ols/1_original/:/rs=w:1000,h:573",
+    "alt": "vFITplus",
+    "all_alts": [
+      "vFITplus",
+      "vFITplus"
+    ]
+  }
+}

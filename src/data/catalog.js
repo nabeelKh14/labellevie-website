@@ -1,6 +1,7 @@
 // Real La Belle Vie Medspa catalog — sourced from their live GoDaddy/OLS store.
 // Product names, slugs, PRICES, and IMAGES are VERIFIED via CloakBrowser render of
-// each live product page (scripts/product_images.json). 41/41 products have real images.
+// each live product page (scripts/product_images_v2.json). Images matched by exact
+// alt-text == product title, largest variant chosen (main shot, not thumbnail).
 
 export const brands = ['Alastin', 'Epicutis', 'SkinBetter', 'NuFACE', 'La Belle Vie']
 
