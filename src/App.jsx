@@ -3,9 +3,10 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
+import Mission from './components/Mission';
 import Philosophy from './components/Philosophy';
 import Protocol from './components/Protocol';
+import FeaturedHome from './components/FeaturedHome';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
 import About from './components/About';
@@ -14,7 +15,6 @@ import Shop from './pages/Shop';
 import ProductPage from './pages/ProductPage';
 import CategoryPage from './pages/CategoryPage';
 import Promo from './pages/Promo';
-import FeaturedHome from './components/FeaturedHome';
 
 function HomePage() {
   useEffect(() => {
@@ -34,11 +34,9 @@ function HomePage() {
   return (
     <div className="w-full min-h-screen bg-background text-dark selection:bg-accent selection:text-white">
       <Hero />
-      <div id="treatments">
-        <Features />
-        <Philosophy />
-        <Protocol />
-      </div>
+      <Mission />
+      <Philosophy />
+      <Protocol />
       <FeaturedHome />
       <div className="px-2 md:px-4 bg-background pb-2 md:pb-4">
         <Footer />
