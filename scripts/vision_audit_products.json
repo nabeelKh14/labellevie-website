@@ -162,5 +162,17 @@
   [
     "vfitplus",
     "NO  \n*Features differ for vFit and vFit PLUS models.*"
+  ],
+  [
+    "membership-vitality",
+    "NO\nLA BELLE VIE MEDSPA"
+  ],
+  [
+    "membership-longevity",
+    "NO  \nThe price list does not mention \"Longevity Membership\" or any related product; it only shows injectables prices for services like Botox, fillers, and bio-stimulators."
+  ],
+  [
+    "membership-aesthetics",
+    "NO\nLA BELLE VIE MEDSPA"
   ]
 ]
