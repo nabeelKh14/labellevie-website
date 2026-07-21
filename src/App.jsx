@@ -19,6 +19,7 @@ import Promo from './pages/Promo';
 function HomePage() {
   useEffect(() => {
     const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    window.__lenis = lenis;
     let raf;
     const loop = (time) => {
       lenis.raf(time);
@@ -28,6 +29,7 @@ function HomePage() {
     return () => {
       cancelAnimationFrame(raf);
       lenis.destroy();
+      if (window.__lenis === lenis) window.__lenis = null;
     };
   }, []);
 
@@ -67,6 +69,11 @@ function App() {
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
+    // Reset Lenis (if mounted) so it doesn't keep its own offset,
+    // then force the native scroll to the top.
+    if (window.__lenis) {
+      window.__lenis.scrollTo(0, { immediate: true });
+    }
     window.scrollTo(0, 0);
   }, [pathname]);
 }

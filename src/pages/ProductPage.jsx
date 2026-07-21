@@ -10,7 +10,7 @@ export default function ProductPage() {
       <div className="min-h-screen bg-background text-dark flex items-center justify-center">
         <div className="text-center">
           <h1 className="font-drama italic text-4xl mb-4">Product not found</h1>
-          <Link href="/shop" className="text-accent font-mono underline">Back to Shop</Link>
+          <Link to="/shop" className="text-accent font-mono underline">Back to Shop</Link>
         </div>
       </div>
     )
@@ -23,11 +23,11 @@ export default function ProductPage() {
     <div className="w-full min-h-screen bg-background text-dark">
       <div className="px-6 md:px-16 pt-32 pb-20 max-w-6xl mx-auto">
         <nav className="font-mono text-sm text-primary/60 mb-8">
-          <Link href="/shop" className="hover:text-accent">Shop</Link>
+          <Link to="/shop" className="hover:text-accent">Shop</Link>
           {category && (
             <>
               <span className="mx-2">/</span>
-              <Link href={`/shop/category/${category.slug}`} className="hover:text-accent">{category.label}</Link>
+              <Link to={`/shop/category/${category.slug}`} className="hover:text-accent">{category.label}</Link>
             </>
           )}
           <span className="mx-2">/</span>
@@ -78,7 +78,7 @@ export default function ProductPage() {
             <h2 className="font-sans font-bold text-2xl mb-6">More from {category?.label}</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {related.map((r) => (
-                <Link key={r.slug} href={`/shop/product/${r.slug}`} className="group">
+                <Link key={r.slug} to={`/shop/product/${r.slug}`} className="group">
                   <div className="rounded-2xl overflow-hidden bg-dark/5 aspect-square mb-3">
                     {r.image ? (
                       <img src={r.image} alt={r.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

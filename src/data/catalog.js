@@ -63,6 +63,9 @@ export const products = [
   { name: 'Trio Luxe Moisture Treatment', brand: 'SkinBetter', category: 'moisturizers', price: '$175.00', slug: 'trio-luxe-moisture-treatment', image: '/images/products/trio-luxe-moisture-treatment.jpg' },
   { name: 'Trio Rebalancing Moisture Treatment 50 mL', brand: 'SkinBetter', category: 'moisturizers', price: '$155.00', slug: 'trio-rebalancing-moisture-treatment-50-ml', image: '/images/products/trio-rebalancing-moisture-treatment-50-ml.jpg' },
   { name: 'vFITplus', brand: 'La Belle Vie', category: 'treatments', price: '$495.00', slug: 'vfitplus', image: '/images/products/vfitplus.jpg' },
+  { name: 'Vitality Membership', brand: 'La Belle Vie', category: 'membership', price: '$290/month', slug: 'membership-vitality', image: '/images/services/service-3.jpg', external: '/#membership' },
+  { name: 'Longevity Membership', brand: 'La Belle Vie', category: 'membership', price: '$850/month', slug: 'membership-longevity', image: '/images/services/service-5.jpg', external: '/#membership' },
+  { name: 'Aesthetics Membership', brand: 'La Belle Vie', category: 'membership', price: '$1,400+/quarter', slug: 'membership-aesthetics', image: '/images/services/service-8.jpg', external: '/#membership' },
 ]
 
 export const featuredSlugs = [

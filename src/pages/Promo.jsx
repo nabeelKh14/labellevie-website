@@ -1,27 +1,16 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Aurora from '../components/reactbits/Aurora'
-
-gsap.registerPlugin(ScrollTrigger)
-
-const gallery = [
-  { src: '/images/hero.jpg', label: 'Our Team' },
-  { src: '/images/treatment-1.jpg', label: 'Advanced Treatments' },
-  { src: '/images/treatment-2.jpg', label: 'The Experience' },
-  { src: '/images/banner.jpg', label: 'Woodland Hills & Burbank' },
-]
 
 export default function Promo() {
   const root = useRef(null)
-  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [sent, setSent] = useState(false)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray('[data-reveal]').forEach((el) => {
-        gsap.from(el, {
-          y: 50, opacity: 0, duration: 1, ease: 'power3.out',
+        gsap.from(el, { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out',
           scrollTrigger: { trigger: el, start: 'top 85%' },
         })
       })
@@ -31,27 +20,31 @@ export default function Promo() {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    // Honest lead capture: route to their real booking line (no fake backend).
     const body = encodeURIComponent(
-      `Promo voucher request\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nMessage: ${form.message}`
+      `Promo voucher request\nName: ${form.name}\nEmail: ${form.email}\nMessage: ${form.message}`
     )
     window.location.href = `tel:8183928500`
     setSent(true)
   }
 
+  const offers = [
+    { title: 'Advanced Facials', desc: 'Customized medical-grade facial treatments', price: 'from $150' },
+    { title: 'Laser Treatments', desc: 'IPL, hair removal, skin resurfacing', price: 'from $200' },
+    { title: 'Injectables & Tox', desc: 'Botox, fillers, and neuromodulators', price: 'from $350' },
+    { title: 'Body Contouring', desc: 'Evolve Transform and non-surgical sculpting', price: 'from $500' },
+    { title: 'Microneedling', desc: 'Collagen induction therapy for skin renewal', price: 'from $400' },
+    { title: 'Pelvic Wellness', desc: 'Votiv, pelvic floor therapy, and FemiLift', price: 'Inquire' },
+  ]
+
   return (
     <div ref={root} className="w-full min-h-screen bg-dark text-background selection:bg-accent selection:text-white">
-      {/* Aurora backdrop */}
       <div className="fixed inset-0 opacity-[0.12] pointer-events-none">
         <Aurora />
       </div>
 
       {/* Hero */}
       <section className="relative px-6 md:px-16 pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: 'url("/images/banner.jpg")' }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: 'url("/images/banner.jpg")' }} />
         <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/60 to-dark" />
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <p data-reveal className="font-mono text-accent text-sm tracking-[0.3em] uppercase mb-6">
@@ -64,89 +57,70 @@ export default function Promo() {
             One of our exclusive pricing options — personalized to your goals. Begin your
             treatment journey at La Belle Vie Medspa.
           </p>
-          <a
-            href="tel:8183928500"
-            data-reveal
-            className="inline-block mt-10 bg-accent text-background px-10 py-4 rounded-full font-sans font-semibold tracking-wide hover:scale-105 transition-transform"
-          >
-            Book Now · 818.392.8500
-          </a>
         </div>
       </section>
 
-      {/* Image gallery — all real site images */}
-      <section className="relative z-10 px-6 md:px-16 py-16">
-        <h2 data-reveal className="font-sans font-bold text-3xl md:text-4xl text-background mb-10 text-center">
-          Inside La Belle Vie
+      {/* Pay Now / Offers — mirroring the real site's Pay Now items */}
+      <section className="relative z-10 px-6 md:px-16 py-10">
+        <h2 data-reveal className="font-sans font-bold text-2xl md:text-3xl text-background mb-8 text-center">
+          Choose Your Offer
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-          {gallery.map((g) => (
-            <div key={g.src} data-reveal className="relative group overflow-hidden rounded-2xl aspect-[3/4]">
-              <img
-                src={g.src}
-                alt={g.label}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent" />
-              <span className="absolute bottom-4 left-4 font-mono text-xs uppercase tracking-wider text-background/90">
-                {g.label}
-              </span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          {offers.map((o) => (
+            <div key={o.title} data-reveal className="bg-background/5 border border-background/10 rounded-2xl p-6 text-center hover:border-accent/50 transition-all">
+              <h3 className="font-sans font-semibold text-lg text-background mb-2">{o.title}</h3>
+              <p className="font-serif text-background/60 italic text-sm mb-4">{o.desc}</p>
+              <p className="font-mono text-accent text-lg font-bold mb-5">{o.price}</p>
+              <a
+                href="tel:8183928500"
+                className="inline-block w-full py-3 rounded-xl bg-accent text-white font-sans font-semibold text-sm hover:scale-[1.02] transition-transform"
+              >
+                Book Now
+              </a>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Voucher form + locations */}
+      {/* Voucher form — matching the real promo page layout */}
       <section className="relative z-10 px-6 md:px-16 py-20">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-          {/* Form */}
           <div data-reveal className="bg-background/5 border border-background/10 rounded-3xl p-8 backdrop-blur-sm">
-            <h3 className="font-drama italic text-3xl text-background mb-2">Get your voucher</h3>
+            <h3 className="font-drama italic text-3xl text-background mb-2">Claim your voucher</h3>
             <p className="font-sans text-background/60 text-sm mb-6">
-              Tell us how to reach you. We'll match you with the right exclusive offer.
+              Take advantage of our exclusive monthly offers. Fill in your details and we'll
+              match you with the right pricing option.
             </p>
             {sent ? (
               <div className="text-accent font-sans text-lg py-8">
-                Thanks, {form.name || 'friend'}. Calling our booking line now — or text 818.392.8500.
+                Thanks, {form.name || 'friend'}! Calling our booking line now — or text 818.392.8500.
               </div>
             ) : (
               <form onSubmit={onSubmit} className="flex flex-col gap-4">
                 <input
-                  required
-                  value={form.name}
+                  required value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   placeholder="Name"
                   className="bg-dark/40 border border-background/15 rounded-xl px-4 py-3 font-sans text-background placeholder:text-background/40 focus:border-accent focus:outline-none"
                 />
                 <input
-                  required type="email"
-                  value={form.email}
+                  required type="email" value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   placeholder="Email*"
-                  className="bg-dark/40 border border-background/15 rounded-xl px-4 py-3 font-sans text-background placeholder:text-background/40 focus:border-accent focus:outline-none"
-                />
-                <input
-                  value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  placeholder="Phone"
                   className="bg-dark/40 border border-background/15 rounded-xl px-4 py-3 font-sans text-background placeholder:text-background/40 focus:border-accent focus:outline-none"
                 />
                 <textarea
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  placeholder="Which treatment are you interested in?"
+                  placeholder="Message"
                   rows={3}
                   className="bg-dark/40 border border-background/15 rounded-xl px-4 py-3 font-sans text-background placeholder:text-background/40 focus:border-accent focus:outline-none resize-none"
                 />
-                <button
-                  type="submit"
-                  className="bg-accent text-background font-sans font-semibold py-3 rounded-xl hover:scale-[1.02] transition-transform mt-2"
-                >
-                  Claim Voucher
+                <button type="submit" className="bg-accent text-background font-sans font-semibold py-3 rounded-xl hover:scale-[1.02] transition-transform mt-2">
+                  Send
                 </button>
                 <p className="font-mono text-[11px] text-background/40 mt-1">
-                  By submitting you agree to be contacted by La Belle Vie Medspa.
+                  This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
                 </p>
               </form>
             )}
@@ -174,10 +148,7 @@ export default function Promo() {
                 </p>
               </div>
             </div>
-            <a
-              href="tel:8183928500"
-              className="font-sans text-lg text-background border border-background/20 rounded-full px-6 py-3 text-center hover:bg-accent hover:text-background hover:border-accent transition-colors"
-            >
+            <a href="tel:8183928500" className="font-sans text-lg text-background border border-background/20 rounded-full px-6 py-3 text-center hover:bg-accent hover:text-background hover:border-accent transition-colors">
               Call or Text · 818.392.8500
             </a>
           </div>
