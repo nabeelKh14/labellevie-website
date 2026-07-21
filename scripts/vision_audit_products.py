@@ -24,7 +24,7 @@ def ask(img_path, prompt, tries=3):
         return f"ERR:prep:{str(e)[:50]}"
     with open(tmp, "rb") as f:
         b64 = base64.b64encode(f.read()).decode()
-    payload = {"model": "qwen3-vl:2b", "prompt": prompt, "images": [b64], "stream": False}
+    payload={"model":"qwen3-vl:4b","prompt":prompt,"images":[b64],"stream":False}
     for t in range(tries):
         try:
             req = urllib.request.Request(
