@@ -64,12 +64,13 @@ export default function About() {
         </div>
       </div>
 
-      {/* In the press — real content from their site */}
+      {/* In the press — real content + images from their site */}
       <div className="bg-dark py-20 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
             <div className="relative overflow-hidden rounded-2xl">
-              <img src="/images/about-inner.jpg" alt="Paris Hilton x La Belle Vie Medspa" className="w-full object-cover h-[400px]" loading="lazy" />
+              <img src="/images/about-3.jpg" alt="Kim Kardashian x La Belle Vie Medspa" className="w-full object-cover h-[400px]" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
             </div>
             <div>
               <p className="font-mono text-accent text-sm tracking-widest uppercase mb-4">In the Press</p>
@@ -89,10 +90,10 @@ export default function About() {
               </div>
             ))}
           </div>
-          <div className="mt-8 text-center">
-            <a href="https://www.forbes.com" target="_blank" rel="noopener noreferrer" className="inline-block font-mono text-accent text-sm underline hover:text-accent/80">
-              Awarded Best Medspa — Forbes
-            </a>
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="/images/about-3.jpg" alt="Kim Kardashian at La Belle Vie" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
+            <img src="/images/about-2.jpg" alt="Khloé Kardashian at La Belle Vie" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
+            <img src="/images/about-1.jpg" alt="La Belle Vie team" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
           </div>
         </div>
       </div>
@@ -103,7 +104,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div ref={imageRef} className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img src="/images/about-2.jpg" alt="La Belle Vie Medspa" className="w-full h-[500px] object-cover" />
+                <img src="/images/about-1.jpg" alt="La Belle Vie Medspa team" className="w-full h-[500px] object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/30 to-transparent"></div>
               </div>
               <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-primary/30 rounded-2xl -z-10"></div>
@@ -140,8 +141,8 @@ export default function About() {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img src="/images/about-team-1.jpg" alt="Team" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
-              <img src="/images/about-team-2.jpg" alt="Team" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
+              <img src="/images/about-1.jpg" alt="La Belle Vie team group" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
+              <img src="/images/about-inner.jpg" alt="La Belle Vie team selfie" className="rounded-2xl w-full h-48 object-cover" loading="lazy" />
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
