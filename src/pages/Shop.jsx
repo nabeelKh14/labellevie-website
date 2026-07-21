@@ -26,6 +26,16 @@ function ProductCard({ product }) {
         )}
       </div>
       <div className="flex flex-col flex-1 p-4">
+        {product.popular && (
+          <span className="inline-block mb-2 px-2 py-0.5 bg-accent text-white font-mono text-[10px] uppercase font-bold tracking-wider rounded-full">
+            Most Popular
+          </span>
+        )}
+        {!product.popular && product.originalPrice && (
+          <span className="inline-block mb-2 px-2 py-0.5 bg-white/20 text-white font-mono text-[10px] uppercase font-bold tracking-wider rounded-full">
+            Sale
+          </span>
+        )}
         <span className="font-mono text-[10px] uppercase tracking-widest text-accent">
           {product.brand}
         </span>
@@ -33,9 +43,16 @@ function ProductCard({ product }) {
           {product.name}
         </h3>
         <div className="mt-auto pt-4 flex items-center justify-between">
-          <span className="font-mono text-sm font-semibold text-accent">
-            {product.price || 'In-Clinic'}
-          </span>
+          <div className="flex flex-col">
+            <span className="font-mono text-sm font-semibold text-accent">
+              {product.price}
+            </span>
+            {product.originalPrice && (
+              <span className="font-mono text-[11px] text-background/40 line-through">
+                {product.originalPrice}
+              </span>
+            )}
+          </div>
           <span className="font-sans text-xs font-semibold text-background/80 border border-background/25 rounded-full px-3 py-1 group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-colors">
             {product.external ? 'Details' : 'View'}
           </span>
@@ -51,7 +68,11 @@ export default function Shop() {
   const featured = useMemo(() => getFeatured(), [])
 
   const filtered = useMemo(
-    () => (active === 'all' ? products : products.filter((p) => p.category === active)),
+    () => (active === 'all'
+      ? products
+      : active === 'most-popular'
+        ? products.filter((p) => p.popular)
+        : products.filter((p) => p.category === active)),
     [active]
   )
 

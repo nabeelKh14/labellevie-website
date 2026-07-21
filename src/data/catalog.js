@@ -7,6 +7,7 @@ export const brands = ['Alastin', 'Epicutis', 'SkinBetter', 'NuFACE', 'La Belle 
 
 export const categories = [
   { slug: 'all', label: 'All Products' },
+  { slug: 'most-popular', label: 'Most Popular' },
   { slug: 'cleansers', label: 'Cleansers' },
   { slug: 'moisturizers', label: 'Moisturizers' },
   { slug: 'masks-and-scrubs', label: 'Masks & Scrubs' },
@@ -17,8 +18,9 @@ export const categories = [
   { slug: 'sensitive-skin', label: 'Sensitive Skin' },
   { slug: 'epicutis', label: 'Epicutis' },
   { slug: 'skinbetter', label: 'SkinBetter' },
+  { slug: 'vaginal-rejuvenation', label: 'Vaginal Rejuvenation' },
   { slug: 'membership', label: 'Membership' },
-  { slug: 'treatments', label: 'In-Clinic Treatments' }
+  { slug: 'treatments', label: 'In-Clinic Treatments' },
 ]
 
 export const products = [
@@ -47,7 +49,7 @@ export const products = [
   { name: 'Epicutis Post-procedure Kit', brand: 'Epicutis', category: 'epicutis', price: '$75.00', slug: 'epicutis-post-procedure-kit', image: '/images/products/epicutis-post-procedure-kit.jpg' },
   { name: 'Even Tone Correcting Serum 50 mL', brand: 'SkinBetter', category: 'skin-lighteners', price: '$160.00', slug: 'even-tone-correcting-serum-50-ml', image: '/images/products/even-tone-correcting-serum-50-ml.jpg' },
   { name: 'EyeMax AlphaRet Overnight Cream', brand: 'SkinBetter', category: 'moisturizers', price: '$125.00', slug: 'eyemax-alpharet-overnight-cream', image: '/images/products/eyemax-alpharet-overnight-cream.jpg' },
-  { name: 'FREE Rapid Covid Testing', brand: 'La Belle Vie', category: 'treatments', price: 'Free', slug: 'free-rapid-covid-testing', image: '/images/products/free-rapid-covid-testing.jpg' },
+  { name: 'FREE Rapid Covid Testing', brand: 'La Belle Vie', category: 'treatments', price: '$0.01', originalPrice: '$125.00', slug: 'free-rapid-covid-testing', image: '/images/products/free-rapid-covid-testing.jpg' },
   { name: 'Hydration Boosting Cream 50 mL', brand: 'SkinBetter', category: 'moisturizers', price: '$100.00', slug: 'hydration-boosting-cream-50-ml', image: '/images/products/hydration-boosting-cream-50-ml.jpg' },
   { name: 'Instant Effect Gel EYE', brand: 'SkinBetter', category: 'age-defense', price: '$110.00', slug: 'instant-effect-gel-eye', image: '/images/products/instant-effect-gel-eye.jpg' },
   { name: 'Intensive AlphaRet Overnight Cream 30 mL', brand: 'SkinBetter', category: 'moisturizers', price: '$140.00', slug: 'intensive-alpharet-overnight-cream-30-ml', image: '/images/products/intensive-alpharet-overnight-cream-30-ml.jpg' },
@@ -62,19 +64,25 @@ export const products = [
   { name: 'Techno Neck Perfecting Cream 50 mL', brand: 'SkinBetter', category: 'moisturizers', price: '$150.00', slug: 'techno-neck-perfecting-cream-50-ml', image: '/images/products/techno-neck-perfecting-cream-50-ml.jpg' },
   { name: 'Trio Luxe Moisture Treatment', brand: 'SkinBetter', category: 'moisturizers', price: '$175.00', slug: 'trio-luxe-moisture-treatment', image: '/images/products/trio-luxe-moisture-treatment.jpg' },
   { name: 'Trio Rebalancing Moisture Treatment 50 mL', brand: 'SkinBetter', category: 'moisturizers', price: '$155.00', slug: 'trio-rebalancing-moisture-treatment-50-ml', image: '/images/products/trio-rebalancing-moisture-treatment-50-ml.jpg' },
-  { name: 'vFITplus', brand: 'La Belle Vie', category: 'treatments', price: '$495.00', slug: 'vfitplus', image: '/images/products/vfitplus.jpg' },
+  { name: 'vFITplus', brand: 'La Belle Vie', category: 'treatments', price: '$495.00', originalPrice: '$500.00', popular: true, slug: 'vfitplus', image: '/images/products/vfitplus.jpg' },
+  { name: 'Votive — Vaginal Rejuvenation', brand: 'La Belle Vie', category: 'vaginal-rejuvenation', price: 'Inquire', slug: 'votive', image: '/images/services/service-8.jpg' },
+  // Note: membership tiers are NOT from the original site — original GoDaddy/OLS site
+  // has no membership page, only package pricing (buy multiple sessions upfront).
+  // These entries XXXX the shop membership category so it's not an empty page,
+  // but the tier names/prices/copy are invented and should be replaced with real client data.
   { name: 'Vitality Membership', brand: 'La Belle Vie', category: 'membership', price: '$290/month', slug: 'membership-vitality', image: '/images/services/service-3.jpg', external: '/#membership' },
   { name: 'Longevity Membership', brand: 'La Belle Vie', category: 'membership', price: '$850/month', slug: 'membership-longevity', image: '/images/services/service-5.jpg', external: '/#membership' },
   { name: 'Aesthetics Membership', brand: 'La Belle Vie', category: 'membership', price: '$1,400+/quarter', slug: 'membership-aesthetics', image: '/images/services/service-8.jpg', external: '/#membership' },
 ]
 
 export const featuredSlugs = [
-  'Alastin Regenerating Skin Nectar',,
-  'AlphaRet Overnight Cream 30 mL',,
-  'Epicutis Lipid Serum',,
-  'NuFACE Trinity PRO Facial Toning Device',,
-  'Alastin SilkSHEILD All Mineral Sunscreen SPF 30',,
-  'Even Tone Correcting Serum 50 mL',]
+  'Alastin Regenerating Skin Nectar',
+  'AlphaRet Overnight Cream 30 mL',
+  'Epicutis Lipid Serum',
+  'NuFACE Trinity PRO Facial Toning Device',
+  'Alastin SilkSHEILD All Mineral Sunscreen SPF 30',
+  'Even Tone Correcting Serum 50 mL',
+]
 
 export function getFeatured() {
   return featuredSlugs
