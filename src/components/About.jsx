@@ -91,16 +91,16 @@ export default function About() {
       </div>
 
       {/* In the Press — logos grid (Kourtney, Poosh, Services, USWeekly, Forbes, BestMedspa) */}
-      <div className="bg-background py-16 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto">
-          <p className="font-mono text-accent text-sm tracking-widest uppercase mb-2 text-center">In the Press</p>
-          <h2 className="font-drama italic text-3xl md:text-4xl text-dark font-normal text-center mb-10">As Seen In</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="bg-background py-20 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-accent text-sm tracking-widest uppercase mb-3 text-center">In the Press</p>
+          <h2 className="font-drama italic text-4xl md:text-5xl text-dark font-normal text-center mb-14">As Seen In</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {pressLogos.map((p) => (
-              <div key={p.name} className="bg-white rounded-2xl p-5 text-center shadow-md border border-dark/5 hover:shadow-lg transition-shadow">
-                <img src={p.img} alt={p.alt} className="w-24 h-24 mx-auto object-contain mb-4" loading="lazy" />
-                <h3 className="font-sans font-semibold text-sm text-dark">{p.name}</h3>
-                <p className="font-serif text-dark/60 italic text-xs mt-1 leading-snug">{p.text}</p>
+              <div key={p.name} className="bg-white rounded-3xl p-8 text-center shadow-lg border border-dark/5 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col items-center justify-center min-h-[200px]">
+                <img src={p.img} alt={p.alt} className="w-32 h-32 mx-auto object-contain mb-5" loading="lazy" />
+                <h3 className="font-sans font-semibold text-base text-dark">{p.name}</h3>
+                <p className="font-serif text-dark/60 italic text-sm mt-2 leading-snug">{p.text}</p>
               </div>
             ))}
           </div>
@@ -112,7 +112,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="relative">
             <div className="overflow-hidden rounded-2xl shadow-xl">
-              <img src="/images/about-inner.jpg" alt="La Belle Vie team" className="w-full h-96 object-cover" loading="lazy" />
+              <img src="/images/about/team-1.jpg" alt="La Belle Vie Medspa" className="w-full h-96 object-cover" loading="lazy" />
             </div>
             <div className="absolute -bottom-5 -right-5 w-full h-full border-2 border-primary/30 rounded-2xl -z-10"></div>
           </div>
