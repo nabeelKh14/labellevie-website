@@ -16,7 +16,6 @@ function ProductCard({ product }) {
           <img
             src={product.image}
             alt={product.name}
-            loading="lazy"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
@@ -78,13 +77,10 @@ export default function Shop() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.shop-card', {
-        y: 30,
-        opacity: 0,
-        duration: 0.55,
-        stagger: 0.035,
-        ease: 'power3.out',
-      })
+      gsap.fromTo('.shop-card',
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.55, stagger: 0.035, ease: 'power3.out', clearProps: 'opacity,transform' }
+      )
     }, root)
     return () => ctx.revert()
   }, [active])

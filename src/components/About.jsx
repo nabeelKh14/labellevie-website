@@ -60,7 +60,7 @@ export default function About() {
     <section id="about" ref={sectionRef} className="relative w-full min-h-screen bg-background overflow-hidden">
       {/* Hero — kept as you liked it */}
       <div ref={heroRef} className="relative w-full h-[80vh] md:h-[90vh]">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/images/banner.jpg")' }}>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/images/about-hero.jpg")' }}>
           <div className="absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/20 to-dark/60"></div>
         </div>
         <div className="absolute inset-0 flex flex-col items-center justify-center px-6">
