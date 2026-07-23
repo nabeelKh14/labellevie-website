@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import Aurora from '../components/reactbits/Aurora'
 import { categories, products, getFeatured } from '../data/catalog'
+import { useCart } from '../context/CartContext'
 
 function ProductCard({ product }) {
   const href = product.external || `/shop/product/${product.slug}`
+  const { addItem } = useCart()
   return (
     <Link
       to={href}
@@ -52,9 +54,16 @@ function ProductCard({ product }) {
               </span>
             )}
           </div>
-          <span className="font-sans text-xs font-semibold text-background/80 border border-background/25 rounded-full px-3 py-1 group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-colors">
-            {product.external ? 'Details' : 'View'}
-          </span>
+          <button
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              addItem(product)
+            }}
+            className="font-sans text-xs font-semibold text-background/80 border border-background/25 rounded-full px-3 py-1 group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-colors"
+          >
+            + Cart
+          </button>
         </div>
       </div>
     </Link>

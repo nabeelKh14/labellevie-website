@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Mission from './components/Mission';
 import Services from './components/Services';
+import Reviews from './components/Reviews';
 import Philosophy from './components/Philosophy';
 import Protocol from './components/Protocol';
 import FeaturedHome from './components/FeaturedHome';
@@ -16,6 +17,10 @@ import Shop from './pages/Shop';
 import ProductPage from './pages/ProductPage';
 import CategoryPage from './pages/CategoryPage';
 import Promo from './pages/Promo';
+import Checkout from './pages/Checkout';
+import Guide from './pages/Guide';
+import { CartProvider } from './context/CartContext';
+import CartDrawer from './components/CartDrawer';
 
 function HomePage() {
   useEffect(() => {
@@ -39,6 +44,7 @@ function HomePage() {
       <Hero />
       <Mission />
       <Services />
+      <Reviews />
       <Philosophy />
       <Protocol />
       <FeaturedHome />
@@ -52,27 +58,30 @@ function HomePage() {
 
 function App() {
   return (
-    <div className="w-full min-h-screen bg-background text-dark selection:bg-accent selection:text-white">
-      <Navbar />
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/price-list" element={<PriceList />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/shop/category/:slug" element={<CategoryPage />} />
-        <Route path="/shop/product/:slug" element={<ProductPage />} />
-        <Route path="/promo" element={<Promo />} />
-      </Routes>
-    </div>
+    <CartProvider>
+      <div className="w-full min-h-screen bg-background text-dark selection:bg-accent selection:text-white">
+        <Navbar />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/price-list" element={<PriceList />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/category/:slug" element={<CategoryPage />} />
+          <Route path="/shop/product/:slug" element={<ProductPage />} />
+          <Route path="/promo" element={<Promo />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/guide" element={<Guide />} />
+        </Routes>
+        <CartDrawer />
+      </div>
+    </CartProvider>
   );
 }
 
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
-    // Reset Lenis (if mounted) so it doesn't keep its own offset,
-    // then force the native scroll to the top.
     if (window.__lenis) {
       window.__lenis.scrollTo(0, { immediate: true });
     }

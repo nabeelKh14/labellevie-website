@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useCart } from '../context/CartContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
     const navRef = useRef(null);
     const [isScrolled, setIsScrolled] = useState(false);
+    const { count, setIsOpen } = useCart();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,26 +34,42 @@ export default function Navbar() {
                     : 'bg-transparent text-background border border-transparent'
                     }`}
             >
-                <div className="flex items-center gap-2">
+                <Link to="/" className="flex items-center gap-2">
                     <img src="/images/logo.png" alt="La Belle Vie Medspa" className="h-7 w-auto object-contain" />
                     <span className="font-sans font-bold text-lg tracking-tight uppercase hidden sm:block">La belle vie medspa</span>
-                </div>
+                </Link>
 
                 <div className="hidden md:flex items-center gap-8 font-mono text-sm">
-                    <a href="/" className="magnetic-link hover:text-accent transition-colors">Home</a>
-                    <a href="/about" className="magnetic-link hover:text-accent transition-colors">About</a>
-                    <a href="/price-list" className="magnetic-link hover:text-accent transition-colors">Price List</a>
-                    <a href="/shop" className="magnetic-link hover:text-accent transition-colors">Shop</a>
-                    <a href="/promo" className="magnetic-link hover:text-accent transition-colors">Promo</a>
+                    <Link to="/" className="magnetic-link hover:text-accent transition-colors">Home</Link>
+                    <Link to="/about" className="magnetic-link hover:text-accent transition-colors">About</Link>
+                    <Link to="/price-list" className="magnetic-link hover:text-accent transition-colors">Price List</Link>
+                    <Link to="/shop" className="magnetic-link hover:text-accent transition-colors">Shop</Link>
+                    <Link to="/promo" className="magnetic-link hover:text-accent transition-colors">Promo</Link>
                 </div>
 
-                <a
-                    href="tel:8183928500"
-                    className="magnetic-btn bg-accent text-background px-6 py-2.5 rounded-full font-sans font-semibold text-sm tracking-wide"
-                >
-                    <span className="magnetic-btn-bg"></span>
-                    <span className="relative z-10">Book Appointment</span>
-                </a>
+                <div className="flex items-center gap-3">
+                    {/* Cart icon */}
+                    <button
+                        onClick={() => setIsOpen(true)}
+                        className="relative magnetic-btn bg-accent text-background px-4 py-2.5 rounded-full font-sans font-semibold text-sm tracking-wide flex items-center gap-2"
+                        aria-label="Open cart"
+                    >
+                        <span className="relative z-10">Cart</span>
+                        {count > 0 && (
+                            <span className="relative z-10 bg-white text-accent rounded-full text-xs font-bold w-5 h-5 flex items-center justify-center">
+                                {count}
+                            </span>
+                        )}
+                    </button>
+
+                    <a
+                        href="tel:8183928500"
+                        className="magnetic-btn bg-primary text-background px-6 py-2.5 rounded-full font-sans font-semibold text-sm tracking-wide hidden sm:block"
+                    >
+                        <span className="magnetic-btn-bg"></span>
+                        <span className="relative z-10">Book Appointment</span>
+                    </a>
+                </div>
             </nav>
         </div>
     );

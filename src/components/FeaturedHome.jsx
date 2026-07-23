@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import { getFeatured } from '../data/catalog'
 
 // Mirrors the live site's "Featured Products" strip on the landing page,
@@ -14,19 +15,19 @@ export default function FeaturedHome() {
             <span className="font-mono text-xs uppercase tracking-widest text-accent">Featured</span>
             <h2 className="font-sans font-bold text-3xl md:text-5xl mt-2">Medical-Grade Retail</h2>
           </div>
-          <a
-            href="/shop"
+          <Link
+            to="/shop"
             className="hidden md:inline-block font-mono text-sm uppercase tracking-wider border-b border-dark pb-1 hover:text-accent hover:border-accent transition-colors"
           >
             View all &rarr;
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
           {featured.map((p) => (
-            <a
+            <Link
               key={p.name}
-              href="/shop"
+              to={p.external || `/shop/product/${p.slug}`}
               className="group block p-6 bg-white/50 backdrop-blur-xl border border-white/60 rounded-3xl hover:border-accent transition-colors"
             >
               <span className="font-mono text-[10px] uppercase tracking-widest text-primary/50">
@@ -38,16 +39,16 @@ export default function FeaturedHome() {
               <span className="font-mono text-sm font-semibold text-accent mt-3 inline-block">
                 {p.price || 'In-Clinic'}
               </span>
-            </a>
+            </Link>
           ))}
         </div>
 
-        <a
-          href="/shop"
+        <Link
+          to="/shop"
           className="md:hidden mt-8 inline-block font-mono text-sm uppercase tracking-wider border-b border-dark pb-1"
         >
           View all &rarr;
-        </a>
+        </Link>
       </div>
     </section>
   )

@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -41,9 +42,8 @@ export default function Protocol() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {services.map((s) => (
-            <a
-              key={s.label}
-              href="/price-list"
+            <Link
+              to="/price-list"
               className="svc-tile group relative rounded-2xl overflow-hidden aspect-[4/5] bg-dark/5"
             >
               <img
@@ -55,7 +55,7 @@ export default function Protocol() {
               <span className="absolute bottom-4 left-4 right-4 font-sans font-semibold text-background text-sm md:text-base">
                 {s.label}
               </span>
-            </a>
+            </Link>
           ))}
         </div>
 

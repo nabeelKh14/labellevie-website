@@ -1,9 +1,11 @@
 import { useParams, Link } from 'react-router-dom'
 import { products, categories } from '../data/catalog'
+import { useCart } from '../context/CartContext'
 
 export default function ProductPage() {
   const { slug } = useParams()
   const product = products.find((p) => p.slug === slug)
+  const { addItem } = useCart()
 
   if (!product) {
     return (
@@ -55,15 +57,21 @@ export default function ProductPage() {
               Medical-grade {product.brand} product available at La Belle Vie Medspa, Woodland Hills & Burbank, CA.
               Recommended during consultation to pair with your in-clinic treatments.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap">
+              <button
+                onClick={() => addItem(product)}
+                className="bg-accent text-background px-8 py-3 rounded-full font-sans font-semibold hover:scale-105 transition-transform"
+              >
+                Add to Cart
+              </button>
               <a
                 href="tel:8183928500"
-                className="bg-accent text-background px-8 py-3 rounded-full font-sans font-semibold hover:scale-105 transition-transform"
+                className="bg-primary text-background px-8 py-3 rounded-full font-sans font-semibold hover:scale-105 transition-transform"
               >
                 Inquire / Reserve
               </a>
               <Link
-                href="/shop"
+                to="/shop"
                 className="border border-dark/20 px-8 py-3 rounded-full font-sans font-semibold hover:border-accent hover:text-accent transition-colors"
               >
                 Back to Shop
