@@ -20,11 +20,11 @@ export default function Mission() {
     <section ref={ref} className="py-24 px-6 md:px-16 bg-background">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Image */}
-        <div className="mission-reveal relative rounded-3xl overflow-hidden aspect-[4/5]">
+        <div className="mission-reveal relative rounded-3xl overflow-hidden bg-dark/5">
           <img
             src="/images/mission-image.png"
             alt="La Belle Vie MedSpa entrance"
-            className="w-full h-full object-cover"
+            className="w-full h-auto object-contain"
             loading="lazy"
           />
         </div>
