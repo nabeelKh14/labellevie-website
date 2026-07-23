@@ -21,10 +21,10 @@ export default function Protocol() {
   const ref = useRef(null)
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.svc-tile', {
-        scrollTrigger: { trigger: ref.current, start: 'top 80%' },
-        y: 50, opacity: 0, duration: 0.7, stagger: 0.07, ease: 'power3.out',
-      })
+      gsap.fromTo('.svc-tile',
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.7, stagger: 0.07, ease: 'power3.out', clearProps: 'opacity,transform' }
+      );
     }, ref)
     return () => ctx.revert()
   }, [])
@@ -49,7 +49,6 @@ export default function Protocol() {
               <img
                 src={s.img}
                 alt={s.label}
-                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark/85 via-dark/20 to-transparent" />

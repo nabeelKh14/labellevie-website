@@ -4,6 +4,7 @@ import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Mission from './components/Mission';
+import Services from './components/Services';
 import Philosophy from './components/Philosophy';
 import Protocol from './components/Protocol';
 import FeaturedHome from './components/FeaturedHome';
@@ -37,6 +38,7 @@ function HomePage() {
     <div className="w-full min-h-screen bg-background text-dark selection:bg-accent selection:text-white">
       <Hero />
       <Mission />
+      <Services />
       <Philosophy />
       <Protocol />
       <FeaturedHome />
