@@ -22,8 +22,8 @@ export default function Mission() {
         {/* Image */}
         <div className="mission-reveal relative rounded-3xl overflow-hidden aspect-[4/5]">
           <img
-            src="/images/treatment-1.jpg"
-            alt="La Belle Vie Medspa experience"
+            src="/images/mission-image.png"
+            alt="La Belle Vie MedSpa entrance"
             className="w-full h-full object-cover"
             loading="lazy"
           />
