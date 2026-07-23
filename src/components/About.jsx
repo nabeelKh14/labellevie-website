@@ -112,7 +112,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="relative">
             <div className="overflow-hidden rounded-2xl shadow-xl">
-              <img src="/images/about/team-1.jpg" alt="La Belle Vie Medspa" className="w-full h-96 object-cover" loading="lazy" />
+              <img src="/images/mission-image.png" alt="La Belle Vie MedSpa entrance" className="w-full h-96 object-cover" loading="lazy" />
             </div>
             <div className="absolute -bottom-5 -right-5 w-full h-full border-2 border-primary/30 rounded-2xl -z-10"></div>
           </div>
