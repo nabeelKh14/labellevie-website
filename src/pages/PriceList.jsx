@@ -1,7 +1,23 @@
 import { useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import { products, categories } from '../data/catalog'
 
 export default function PriceList() {
+  const catImages = {
+    'cleansers': '/images/products/alastin-ultra-calm-cleansing-cream.png',
+    'moisturizers': '/images/products/alastin-ultra-light-moisturizer.png',
+    'masks-and-scrubs': '/images/products/detoxifying-scrub-mask.jpg',
+    'age-defense': '/images/products/alastin-regenerating-skin-nectar.jpg',
+    'skin-lighteners': '/images/products/even-tone-correcting-serum-50-ml.jpg',
+    'acne-defense': '/images/products/alpharet-clearing-serum.jpg',
+    'sun-protection': '/images/products/alastin-hydratint-pro-mineral-broad-spectrum-sunscreen-spf-36.jpg',
+    'sensitive-skin': '/images/products/epicutis-lipid-serum.jpg',
+    'epicutis': '/images/products/epicutis-hyvia-creme.jpg',
+    'skinbetter': '/images/products/alpharet-overnight-cream-30-ml.jpg',
+    'vaginal-rejuvenation': '/images/services/service-8.jpg',
+    'membership': '/images/services/service-3.jpg',
+    'treatments': '/images/services/IMG_2623.jpeg',
+  }
   const groups = useMemo(() => {
     return categories
       .filter((c) => c.slug !== 'all')
@@ -42,7 +58,7 @@ export default function PriceList() {
             ['/images/services/service-8.jpg', 'Wellness Therapies'],
           ].map(([img, label]) => (
             <div key={label} className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-dark/5">
-              <img src={img} alt={label} loading="lazy" className="w-full h-full object-cover" />
+              <img src={img} alt={label} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent" />
               <span className="absolute bottom-3 left-3 font-sans font-semibold text-background text-sm">{label}</span>
             </div>
@@ -54,19 +70,22 @@ export default function PriceList() {
       <section className="px-6 md:px-16 py-16 max-w-5xl mx-auto">
         {groups.map((g) => (
           <div key={g.slug} className="mb-14">
-            <h2 className="font-sans font-bold text-2xl md:text-3xl text-primary border-b border-primary/15 pb-3 mb-6">
+            <h2 className="font-sans font-bold text-2xl md:text-3xl text-primary border-b border-primary/15 pb-3 mb-6 flex items-center gap-4">
+              {catImages[g.slug] && (
+                <img src={catImages[g.slug]} alt={g.label} className="w-10 h-10 rounded-full object-cover" />
+              )}
               {g.label}
             </h2>
             <ul className="divide-y divide-primary/10">
               {g.items.map((p) => (
                 <li key={p.slug} className="flex items-center justify-between py-4 gap-4">
                   <div className="flex flex-col">
-                    <a
-                      href={`/shop/product/${p.slug}`}
+                    <Link
+                      to={`/shop/product/${p.slug}`}
                       className="font-sans font-semibold text-lg text-dark hover:text-accent transition-colors"
                     >
                       {p.name}
-                    </a>
+                    </Link>
                     <span className="font-mono text-xs uppercase tracking-wider text-primary/60">{p.brand}</span>
                   </div>
                   <span className="font-mono text-base font-semibold text-accent whitespace-nowrap">

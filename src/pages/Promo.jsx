@@ -10,7 +10,7 @@ export default function Promo() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray('[data-reveal]').forEach((el) => {
-        gsap.from(el, { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out',
+        gsap.fromTo(el, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', clearProps: 'opacity,transform',
           scrollTrigger: { trigger: el, start: 'top 85%' },
         })
       })
@@ -20,20 +20,15 @@ export default function Promo() {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    const body = encodeURIComponent(
-      `Promo voucher request\nName: ${form.name}\nEmail: ${form.email}\nMessage: ${form.message}`
-    )
     window.location.href = `tel:8183928500`
     setSent(true)
   }
 
+  // Real promo offers mirrored from labelleviemedspa.com/promo, with verified treatment images.
   const offers = [
-    { title: 'Advanced Facials', desc: 'Customized medical-grade facial treatments', price: 'from $150' },
-    { title: 'Laser Treatments', desc: 'IPL, hair removal, skin resurfacing', price: 'from $200' },
-    { title: 'Injectables & Tox', desc: 'Botox, fillers, and neuromodulators', price: 'from $350' },
-    { title: 'Body Contouring', desc: 'Evolve Transform and non-surgical sculpting', price: 'from $500' },
-    { title: 'Microneedling', desc: 'Collagen induction therapy for skin renewal', price: 'from $400' },
-    { title: 'Pelvic Wellness', desc: 'Votiv, pelvic floor therapy, and FemiLift', price: 'Inquire' },
+    { title: 'Underarm Hyperpigmentation', desc: 'Picoway laser treatment to address underarm discoloration.', price: '$149', img: '/images/services/IMG_5509.jpeg' },
+    { title: 'vTONE Pelvic Floor Therapy', desc: 'Package of 3 sessions for pelvic floor strengthening and wellness.', price: '$895', img: '/images/services/IMG_1153.jpeg' },
+    { title: 'Smooth + Soften', desc: 'Dermaplaning and smoothing treatment for radiant, soft skin.', price: '$12 / unit', img: '/images/services/IMG_8129.jpeg' },
   ]
 
   return (
@@ -44,7 +39,7 @@ export default function Promo() {
 
       {/* Hero */}
       <section className="relative px-6 md:px-16 pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: 'url("/images/banner.jpg")' }} />
+        <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: 'url("/images/homepage-hero.jpg")' }} />
         <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/60 to-dark" />
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <p data-reveal className="font-mono text-accent text-sm tracking-[0.3em] uppercase mb-6">
@@ -60,23 +55,35 @@ export default function Promo() {
         </div>
       </section>
 
-      {/* Pay Now / Offers — mirroring the real site's Pay Now items */}
+      {/* Pay Now / Offers — 3 real promo cards with treatment images */}
       <section className="relative z-10 px-6 md:px-16 py-10">
         <h2 data-reveal className="font-sans font-bold text-2xl md:text-3xl text-background mb-8 text-center">
           Choose Your Offer
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {offers.map((o) => (
-            <div key={o.title} data-reveal className="bg-background/5 border border-background/10 rounded-2xl p-6 text-center hover:border-accent/50 transition-all">
-              <h3 className="font-sans font-semibold text-lg text-background mb-2">{o.title}</h3>
-              <p className="font-serif text-background/60 italic text-sm mb-4">{o.desc}</p>
-              <p className="font-mono text-accent text-lg font-bold mb-5">{o.price}</p>
-              <a
-                href="tel:8183928500"
-                className="inline-block w-full py-3 rounded-xl bg-accent text-white font-sans font-semibold text-sm hover:scale-[1.02] transition-transform"
-              >
-                Book Now
-              </a>
+            <div key={o.title} data-reveal className="group relative rounded-3xl overflow-hidden border border-background/10 hover:border-accent/50 transition-all">
+              <div className="aspect-[4/5] overflow-hidden bg-black/30">
+                <img
+                  src={o.img}
+                  alt={o.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent" />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="font-sans font-semibold text-lg text-background mb-1">{o.title}</h3>
+                <p className="font-serif text-background/60 italic text-sm mb-3">{o.desc}</p>
+                <div className="flex items-center justify-between gap-3">
+                  <span className="font-mono text-accent text-lg font-bold">{o.price}</span>
+                  <a
+                    href="tel:8183928500"
+                    className="inline-block px-5 py-2.5 rounded-xl bg-accent text-white font-sans font-semibold text-sm hover:scale-[1.02] transition-transform"
+                  >
+                    Pay Now
+                  </a>
+                </div>
+              </div>
             </div>
           ))}
         </div>

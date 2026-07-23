@@ -28,17 +28,32 @@ export default function FeaturedHome() {
             <Link
               key={p.name}
               to={p.external || `/shop/product/${p.slug}`}
-              className="group block p-6 bg-white/50 backdrop-blur-xl border border-white/60 rounded-3xl hover:border-accent transition-colors"
+              className="group block p-0 bg-white/50 backdrop-blur-xl border border-white/60 rounded-3xl hover:border-accent transition-colors overflow-hidden"
             >
-              <span className="font-mono text-[10px] uppercase tracking-widest text-primary/50">
-                {p.brand}
-              </span>
-              <h3 className="font-sans font-semibold text-lg leading-snug text-dark mt-2 group-hover:text-accent transition-colors">
-                {p.name}
-              </h3>
-              <span className="font-mono text-sm font-semibold text-accent mt-3 inline-block">
-                {p.price || 'In-Clinic'}
-              </span>
+              <div className="aspect-square overflow-hidden bg-black/5">
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-primary/30 font-drama italic text-2xl">
+                    {p.brand}
+                  </div>
+                )}
+              </div>
+              <div className="p-6">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-primary/50">
+                  {p.brand}
+                </span>
+                <h3 className="font-sans font-semibold text-lg leading-snug text-dark mt-2 group-hover:text-accent transition-colors">
+                  {p.name}
+                </h3>
+                <span className="font-mono text-sm font-semibold text-accent mt-3 inline-block">
+                  {p.price || 'In-Clinic'}
+                </span>
+              </div>
             </Link>
           ))}
         </div>
