@@ -53,9 +53,9 @@ export default function Philosophy() {
             {/* Background Parallax */}
             <div
                 ref={bgRef}
-                className="absolute inset-[auto_auto_-20%_auto] top-[-20%] left-0 w-full h-[140%] opacity-[0.15] pointer-events-none mix-blend-luminosity"
+                className="absolute inset-[auto_auto_-20%_auto] top-[-20%] left-0 w-full h-[140%] opacity-[0.28] pointer-events-none mix-blend-luminosity"
                 style={{
-                    backgroundImage: 'url("/images/treatment-2.jpg")',
+                    backgroundImage: 'url("/images/homepage-hero.jpg")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}
